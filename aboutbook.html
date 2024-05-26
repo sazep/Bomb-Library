@@ -1,110 +1,219 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Название книги</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .text-center {
-            text-align: center;
-        }
-        .color-years-black {
-            display: inline-block;
-            font-weight: 700;
-            padding: 0 4px;
-            border: 0;
-            border-radius: 4px;
-            background: rgba(0, 0, 0, 0.84);
-            word-spacing: -2px;
-            color: #fff;
-        }
-        h2 {
-            font-weight: normal;
-        }
-        article {
-            margin: 20px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            align-items: flex-start;
-        }
-        .div-img{
-            width: auto;
-            height: auto;
-        }
-        img {
-            width: 60%;
-            height: auto;
-            margin-right: 20px;
-        }
-        .rating {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .rating span {
-            font-size: 24px;
-            color: gold;
-            margin-right: 5px;
-        }
-        .rating span.unfilled {
-            color: lightgray;
-        }
-        .dropdown {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-right: 40%;
-            text-align: center;
-        }
-        .dropdown select {
-            padding: 10px;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-    <main>
-        <article>
-            <div class="div-img">
-                <div>
-                    <img src="test.jpg" alt="Обложка книги">
-                    <div class="dropdown">
-                        <select>
-                            <option value="+ Добавить в список" disabled selected hidden >+ Добавить в список</option>
-                            <option value="просмотрено">Просмотрено</option>
-                            <option value="отложено">Отложено</option>
-                            <option value="запланировано">Запланировано</option>
-                            <option value="смотрю">Смотрю</option>
-                            <option value="сохранить">Сохранить</option>
-                        </select>
+    <!DOCTYPE html>
+    <html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Название книги</title>
+        <style>
+            .color-years-black {
+                display: inline-block;
+                font-weight: 700;
+                padding: 0 4px;
+                border: 0;
+                border-radius: 4px;
+                background: rgba(0, 0, 0, 0.84);
+                word-spacing: -2px;
+                color: #fff;
+            }
+
+            h2 {
+                font-weight: normal;
+            }
+
+            article {
+                margin: 30px;
+                border-bottom: 1px solid #ccc;
+                display: flex;
+            }
+
+            img {
+                width: 250px;
+                height: 350px;
+            }
+
+            .rating {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .rating span {
+                font-size: 24px;
+                color: gold;
+                margin-right: 5px;
+            }
+
+            .rating span.unfilled {
+                color: lightgray;
+            }
+
+            .dropdown {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .dropdown select {
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .about-book {
+                width: 100%;
+                margin-left: 50px;
+            }
+
+            .similar-book div {
+                text-align: center;
+                width: 100%;
+                margin: 20px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .similar-book img {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .comment-section {
+                margin: 30px;
+            }
+
+            .comment-form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .comment-form textarea {
+                resize: none;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 100%;
+            }
+
+            .comment-form button {
+                padding: 10px;
+                font-size: 16px;
+                color: #fff;
+                background-color: #000000;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .comment-form button:hover {
+                background-color: #898989;
+            }
+
+            .comment-editor {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+
+            .comment-editor span {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+                border-radius: 4px;
+                background-color: #f1f1f1;
+            }
+
+            .comment-editor span:hover {
+                background-color: #e1e1e1;
+            }
+
+            .comment-editor svg {
+                width: 20px;
+                height: 20px;
+            }
+            .book{
+                height: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <article>
+                <div class="div-img">
+                    <div>
+                        <div>
+                            <img id="book-cover" src="" alt="Обложка книги">
+                        </div>
+                        <div>
+                            <div class="dropdown">
+                                <select>
+                                    <option value="+ Добавить в список" disabled selected hidden>+ Добавить в список</option>
+                                    <option value="просмотрено">Просмотрено</option>
+                                    <option value="отложено">Отложено</option>
+                                    <option value="запланировано">Запланировано</option>
+                                    <option value="смотрю">Смотрю</option>
+                                    <option value="сохранить">Сохранить</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="book-info">
-                <h1>Название книги или сайта хз или вообще хедер как говорится дальше больше</h1>
-                <div class="rating">
-                    <span>★★★★★</span><span class="unfilled">★</span>
+                <div class="about-book">
+                    <h1 id="book-title"></h1>
+                    <div class="rating">
+                        <span id="filled-stars"></span><span id="unfilled-stars"></span>
+                    </div>
+                    <div>
+                        <h2><b>Жанр: </b><span id="book-genre"></span></h2>
+                        <h2><b>Автор(ы): </b><span id="book-authors"></span></h2>
+                        <h2><b>Возрастные ограничения:</b> <span class="color-years-black" id="book-age"></span></h2>
+                        <h2><b>Страниц: </b><span id="book-pages"></span></h2>
+                        <h2><b>ID: </b><span id="book-id"></span></h2>
+                        <h2><b>Язык книги: </b><span id="book-language"></span></h2>
+                        <h2><b>Опубликована: </b><span id="book-date"></span></h2>
+                        <h2><b>Описание: </b><span id="book-description"></span></h2>
+                    </div>
                 </div>
-                <div class="book-details">
-                    <h2><b>Жанр: </b>Роман</h2>
-                    <h2><b>Автор(ы): </b>Иван Иванов, Анна Петрова</h2>
-                    <h2><b>Возрастные ограничения:</b> <span class="color-years-black">18+</span></h2>
-                    <h2><b>Страниц: </b>1000</h2>
-                    <h2><b>ID: </b>225238</h2>
-                    <h2><b>Язык книги: </b>Русский</h2>
-                    <h2><b>Опубликована: </b>15 ноября 2014</h2>
-                    <h2><b>Описание: </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit urna ut aliquam consequat.</h2>
+            </article>
+            <article>
+                <div class="similar-book">
+                    <h1>Связанное</h1>
+                    <div id="similar-books"></div>
+                    <div id="similar-books-text"></div>
                 </div>
+            </article>
+            <article>
+                <div class="book">
+                    
+                </div>
+            </article>
+            <div class="comment-section">
+                <h3>Комментарии</h3>
+                <form class="comment-form">
+                    <div class="comment-editor">
+                        <span title="Жирный" onclick="wrapText('b')"><b>𝐁</b></span>
+                        <span title="Курсив" onclick="wrapText('k')"><i>I</i></span>
+                        <span title="Подчеркнутый" onclick="wrapText('u')"><u>U</u></span>
+                        <span title="Зачёркнутый" onclick="wrapText('s')"><s>S</s></span>
+                        <span title="Спойлер" onclick="wrapText('spoiler')">Spoiler</span>
+                    </div>
+                    <textarea id="comment-text" placeholder="Текст комментария" required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
             </div>
-        </article>
-        <div>
-            <h1 class="text-center">Давайте сделаем вид, как будто тут топ книга и поставим ей 11 из 10 баллов</h1>
-        </div>
-    </main>
-    <footer>
-        <!-- Тут контакты или тип того -->
-    </footer>
-</body>
-</html>
+        </main>
+        <footer>
+            <!-- Тут контакты или тип того -->
+        </footer>
+
+        <script src="aboutbook.js"></script>
+    </body>
+
+    </html>
