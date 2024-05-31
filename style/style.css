@@ -1,0 +1,19 @@
+:root {
+   /* Основний темний колір */
+   --main-dark: #512DA8 ;
+   /* Основний світлий колір */
+   --main-light:#D1C4E9;
+   /* колір акценту */
+   --color-accent:#536DFE ;
+   /* колір основного тексту */
+   --main-text:#212121;
+   /*  колір другорядного тексту */
+   --other-text:#757575;
+   /* колір роздільника */
+   --color-separator:#BDBDBD;
+  }
+  body {
+    background-color: var(--main-dark);
+    color: var(--main-text);
+   
+  }
