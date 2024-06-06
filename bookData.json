@@ -1,0 +1,35 @@
+{
+    "id": "0",
+    "cover": "test.jpg",
+    "title": "Название книги",
+    "genre": "Роман",
+    "authors": "Иван Иванов, Анна Петрова",
+    "age": "16+",
+    "pages": "1000",
+    "language": "Русский",
+    "date": "15 ноября 2014",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "rating": 2,
+    "similarBooks": [
+        {
+            "src": "test.jpg",
+            "title": "Рекомендованная книга 1"
+        },
+        {
+            "src": "test.jpg",
+            "title": "Рекомендованная книга 2"
+        },
+        {
+            "src": "test.jpg",
+            "title": "Рекомендованная книга 3"
+        },
+        {
+            "src": "test.jpg",
+            "title": "Рекомендованная книга 4"
+        },
+        {
+            "src": "test.jpg",
+            "title": "Рекомендованная книга 5"
+        }
+    ]
+}
