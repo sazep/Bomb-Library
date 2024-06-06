@@ -1,39 +1,58 @@
 <html>
     <head>
        <link rel="stylesheet" href="../style/style.css">
-       <link href="https://fonts.google.com/specimen/LXGW+WenKai+Mono+TC?subset=cyrillic&noto.script=Cyrl" rel="stylesheet">
-       <link rel="icon" href="../src/Logo.jpg" sizes="48x48" type="image/jpg">
-       
-       <title>|L0gik LIbrAry|</title>
+       <title>|Logika Lib|</title>
+       <link rel="icon" href="...">
     </head>
     <body>
-        <header>
-            <img src="../src/logo.jpg" alt="Logo">
-            <h1>|L0gIk LIbrAry|</h1>
-        </header>
         <nav>
             <a href="all_books.html">Бібліотека</a>
-            <a href="aboutbook.html">Про книгу</a>
-            <a href="read.html">Читати</a>
-            <div>
-                <input type="text" placeholder="Пошук">
+            <!-- <a href=""></a>
+            <a href=""></a> -->
+            <div class="serch">
+                <input type="text" placeholder="Пошук...">
                 <input type="button" value="Пошук">
             </div>
+            
         </nav>
+        <header>
+            <div class="hover">
+                <h1 id="padded">LOOgiK</h1>
+                <h1  id="hover">НІКОЛИ НЕ ПІЗНО СТАТИ ОРИГІНАЛОМ.</h1>
+                <div class="image">
+                    <img src="../src/sova.jpg">
+                </div>
+            </div>
+        </header>
         <main>
-            <section class="greetings">Чим далі в ліс тим більше розумієш що потрібно було вчити географію</section>
             <section id="new">
                 <div class="book">
-                    <img src="../src/Death Note.jpg" alt="Death Note">
-                    <div class="text">
-                        <h3 class="name">Назва книги</h3>
-                        <h3 class="author">Автор</h3>
+                    <div class="card center">
+                        <div class="front">
+                            <img class="cover" src="../src/Death Note.jpg" alt="">
+                        </div>
+                        <div class="back">
+                            <div class="back-content center">
+                                <h2 class="name">Назва книги: Зошит смерті</h3>
+                                <h2 class="author">Автор: Нісіо Ісін</h3>
+                                <span class="about">Відмінне містично-пригодницьке фентезі, про <br> юнака, який став володарем потойбічного арте- <br>факту та став вершителем людських доль. За сю- <br>жетом, через нудьгу бога смерті Рюука, він нібито <br> випадково упустив свій зошит-записник в люд-<br>ський світ. Зошит потрапляє до найкращого учня<br> Японії Лайта Ягамі.</h6>
+                                <span class="rev">Оцінка: ★★★★★ | Опубліковано: 2024-01-06</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </main>
+                    <!-- <div class="text"> -->
 
-        <footer></footer>
+                        <!-- <h3 class="ln">Рік</h3>
+                        <h3 class="genre">аторапрпарш</h3>
+                        <p class="anthocium">Тарас - 10000 логіков</p> -->
+                    <!-- </div> -->
+            </section>
+            <section id="popular"></section>
+        </main>
+        <footer>
+
+        </footer>
+
         <script type="module" src="../index.js"></script>
     </body>
 </html>
