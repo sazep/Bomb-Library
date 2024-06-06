@@ -1,91 +1,92 @@
 <html>
-    <head>
-    
-        <link rel="stylesheet" href="../style/style.css">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <title>Logika Library</title>
-        <link rel ="icon" href="../src/Logo.jpg">
-       
-     </head>
-     <body>
-         
-         <header>
-             <img src = "../src/logo.jpg">
-             <h1>Logika Library</h1>
-         </header>
-         <div class="slides">
-             <ul>
-                 <li><img src="images/img1.jpg" title="зображення 1" alt="" />
-                     <div>Текст для банера 1</div>
-                 </li>
-                 <li><img src="images/img2.jpg" title="зображення 2" alt="" />
-                     <div>Текст для банера 2</div>
-                 </li>
-                 <li><img src="images/img3.jpg" title="зображення 3" alt="" />
-                     <div>Текст для банера 3</div>
-                 </li>
-                 <li><img src="images/img4.jpg" title="зображення 4" alt="" />
-                     <div>Текст для банера 4</div>
- 
-             </ul>
-         </div>
- 
-         <nav>
- 
-                 <div class="box">
-                         <div class="container-1">
-                             <span class="icon"><i class="fa fa-search"></i></span>
-                             <input type="search" id="search" placeholder="Пошук..." />
-                         </div>
-         
-               
-                         <div class="container-1">
-                             <span class="icon-1"><a class="list-group-item" href="#"></a><i class="fa fa-book fa-fw" aria-hidden="true"></i></span>
-                             <h1 type="search" id="search" placeholder="Пошук..."> </h1>
-                         </div>
- 
-                         <div class="container-1">
-                             <span class="icon-2"><a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;</i></span>
-                             <h2 type="search" id="search" placeholder="Пошук..."> </h2>
-                         </div>
-     
-                 </div>
- 
- 
-         </nav>
-        <!-- <header>
-            <div class="hover">
-                <h1 id="padded">LOOgiK</h1>
-                <h1  id="hover">НІКОЛИ НЕ ПІЗНО СТАТИ ОРИГІНАЛОМ.</h1>
-                <div class="image">
-                    <img src="../src/sova.jpg">
-                </div>
-            </div>
-        </header> -->
-        <main>
-            <section id="new">
-                <div class="book">
-                    <div class="card center">
-                        <div class="front">
-                            <img class="cover" src="../src/Death Note.jpg" alt="">
-                        </div>
-                        <div class="back">
-                            <div class="back-content center">
-                                <h2 class="name">Назва книги: Зошит смерті</h3>
-                                <h2 class="author">Автор: Нісіо Ісін</h3>
-                                <span class="about">Відмінне містично-пригодницьке фентезі, про <br> юнака, який став володарем потойбічного арте- <br>факту та став вершителем людських доль. За сю- <br>жетом, через нудьгу бога смерті Рюука, він нібито <br> випадково упустив свій зошит-записник в люд-<br>ський світ. Зошит потрапляє до найкращого учня<br> Японії Лайта Ягамі.</h6>
-                                <span class="rev">Оцінка: ★★★★★ | Опубліковано: 2024-01-06</p>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Logika Library</title>
+    <link rel="icon" href="../src/Logo.jpg">
+
+    <script type="x/handlebars" id="book">
+        {{#each this}}
+        <div class="book">
+                <div class="card center">
+                    <div class="front">
+                        <img class="cover" src="{{cover}}" alt="">
+                    </div>
+                    <div class="back">
+                        <div class="back-content center">
+                            <h2 class="name">Назва книги: {{name}}</h2>
+                                <h2 class="author">Автор: {{author}}</h2>
+                                    <span class="about">{{anthocium}}</span>
+                                    <span class="rev">Оцінка: ★★★★★ | Опубліковано: 2024-01-06</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-             
-            </section>
-            <section id="popular"></section>
-        </main>
-        <footer>
+        {{/each}}
+    </script>
+</head>
 
-        </footer>
+<body>
 
-        <script type="module" src="../index.js"></script>
-    </body>
+    <header>
+        <img src="../src/logo.jpg">
+        <h1>Logika Library</h1>
+    </header>
+    <div class="slides">
+        <ul>
+            <li><img src="images/img1.jpg" title="зображення 1" alt="" />
+                <div>Текст для банера 1</div>
+            </li>
+            <li><img src="images/img2.jpg" title="зображення 2" alt="" />
+                <div>Текст для банера 2</div>
+            </li>
+            <li><img src="images/img3.jpg" title="зображення 3" alt="" />
+                <div>Текст для банера 3</div>
+            </li>
+            <li><img src="images/img4.jpg" title="зображення 4" alt="" />
+                <div>Текст для банера 4</div>
+
+        </ul>
+    </div>
+
+    <nav>
+
+        <div class="box">
+            <div class="container-1">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" placeholder="Пошук..." />
+            </div>
+
+
+            <div class="container-1">
+                <span class="icon-1"><a class="list-group-item" href="#"></a><i class="fa fa-book fa-fw"
+                        aria-hidden="true"></i></span>
+                <h1 type="search" id="search" placeholder="Пошук..."> </h1>
+            </div>
+
+            <div class="container-1">
+                <span class="icon-2"><a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"
+                            aria-hidden="true">&nbsp;</i></span>
+                <h2 type="search" id="search" placeholder="Пошук..."> </h2>
+            </div>
+
+        </div>
+
+
+    </nav>
+    <main>
+        <section id="new">
+        </section>
+        <section id="popular"></section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script type="module" src="../index.js"></script>
+</body>
+
 </html>
