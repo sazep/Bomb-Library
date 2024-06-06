@@ -1,9 +1,49 @@
 <html>
     <head>
        <link rel="stlesheet" href="../style/style.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+<script type="x/handlebars" id="template">
+    {{#each this}}
+        <article>
+            <img class="cover" src="{{cover}}">
+            <div class="info">
+                <h2 class="name">{{name}}</h2>
+                <h3 class="author">{{author}}</h3>
+                <h3 class="ln">{{ln}}</h3>
+                <h3 class="genre">{{genre}}</h3>
+                <p class="anthocium">{{anthocium}}</p>
+            </div>
+        </article>
+        {{/each}}
+   </script>
+    <script type="x/handlebars" id="banner">
+        <div class="bunner">
+            <a href=""><img src=""></a>
+            <button id="before">before</button>
+            <button id="before">after</button>
+        </div>
+
+    </script>
     </head>
     <body>
+       
+            <header id="banners">
 
+            </header>
+        <main>
+            <section id="new">
+                
+
+            </section>
+            <h1>======================</h1>
+            <section id="popular">
+
+            </section>
+        </main>
+        <footer>
+
+        </footer>
         <script type="module" src="../index.js"></script>
     </body>
 </html>
