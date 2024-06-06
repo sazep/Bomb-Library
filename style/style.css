@@ -1,245 +1,328 @@
 :root {
-   /* Основний темний колір */
-   --main-dark: #512DA8 ;
-   /* Основний світлий колір */
-   --main-text:#D1C4E9;
-   /* колір акценту */
-   --color-accent:#536DFE ;
-   /* колір основного тексту */
-   --main-light:#212121;
-   /*  колір другорядного тексту */
-   --other-text:#757575;
-   /* колір роздільника */
-   --color-separator:#BDBDBD;
-  }
-  body {
-    background-color: var(--main-dark);
-    color: var(--main-text);
-   
-  }
-  .baner-body{
-    display: flex;
-    flex-direction: row;
-  }
+  /* Основний темний колір */
+  --main-dark: #512DA8 ;
+  /* Основний світлий колір */
+  --main-text:#D1C4E9;
+  /* колір акценту */
+  --color-accent:#536DFE ;
+  /* колір основного тексту */
+  --main-light:#212121;
+  /*  колір другорядного тексту */
+  --other-text:#757575;
+  /* колір роздільника */
+  --color-separator:#BDBDBD;
+ }
+ body {
+   background-color: var(--main-dark);
+   color: var(--main-text);
+   font-family: Roboto, sanserif;
+ }
+ .baner-body{
+  display: flex;
+  flex-direction: row;
+}
 
 
-  header{
-    display: flex;
-    flex-direction: column;
-     
-  }
-  header img{
-    margin-right: 4%;
-    width: 60px;
-    height: 60px;
-    box-shadow: 3px 3px 2px black;
-    border-radius: 32px;
-  }
-  nav{
-    position: fixed;
-    width: 20%;
-    height: 200px;
-    margin-top: 10%;
-    left: 1%;
-    font-size: large;
-  }
-  nav a{
-    text-decoration: none;
-    display: flex;
-
-    color: var(--main-text);
-
-
-
-    
-    
-  }
-  nav input{
-    box-shadow: 3px 3px 2px black;
-    height: 15%;
-    width: 60%;
-  }
-  section{
-    position: relative;
-  }
-  main{
-    position: relative;
-    top:25%;
-    width: 20%;
-    margin-left: 45%;
-
-  }
-  .book{
-    display: flex;
-    width: 30%;
-    height: 200px;
-    margin-right: 100%;
-    font-size: larger;
-  }
-  .text{
-    position: absolute;
-    top: 0%;
-    display: none;
-  }
-  .cover:hover{
-    opacity: 0.2;
-    transition: 2s;
-  }
-
-  .text:hover{
-    display: flex;
-    transition: 2s;
-  }
-  /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
-
-  
-  .icon-1{
-    margin-top: 100%;
-  }
-  
-.box{
-  margin: 100px auto;
-  width: 300px;
-  height: 50px;
-  margin-top: 26%;
+header{
   display: flex;
   flex-direction: column;
-  }
+   
+}
+header img{
+  margin-right: 4%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 3px 3px 2px black;
+  border-radius: 32px;
+}
+nav{
+  position: fixed;
+  width: 20%;
+  height: 200px;
+  margin-top: 10%;
+  left: 1%;
+  font-size: large;
+}
+nav a{
+  text-decoration: none;
+  display: flex;
+
+  color: var(--main-text);
+
+
+
+  
+  
+}
+nav input{
+  box-shadow: 3px 3px 2px black;
+  height: 15%;
+  width: 60%;
+}
+ .hover{
+   padding-left:120px;
+   padding-right:140px;
+   box-shadow: inset 0 0 0 0 #000000;
+   color: white;
+   transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+   border-radius:0 10px 10px 0;
+   
+ }
+ .hover:hover {
+   box-shadow: inset 1100px 10px 10px 100px #f7f7f7;
+   color: #42218d;
+   border-radius:0 10px 10px 0;
+ }
+
+ .center{
+   position: absolute;
+   top:55%;
+   left: 9%;
+   transform: translate(-50%, -50%);
+ } 
+ .card{
+   cursor: pointer;
+   width: 280px;
+   height: 380px;
+ }
+ .front,
+ .back{
+   width: 100%;
+   height:100%;
+   overflow: hidden;
+   backface-visibility: hidden;
+   position: absolute;
+   transition: transform .6s linear;
+ }
+ .front img{
+   height: 100%;
+ }
+
+ .front{
+   transform: perspective(600px) rotateY(0deg);
+ }
+
+ .back{
+   transform: perspective(600px) rotateY(180deg);
+   background: rgb(63,94,251);
+   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(122,70,252,1) 100%);
+   border: #f7f7f7 3px groove;
+ }
+
+ .back-content{
+   width: 300px;
+   text-align:left;
+   padding-left: 98%;
+   padding-bottom: 10%;
+   font-size:70%;
+   color: #f5f5f5;
+ }
+
+ .card:hover > .front{
+   transform: perspective(600px) rotateY(-180deg);
+ }
+
+ .card:hover > .back{
+   transform: perspective(600px) rotateY(0deg);
+ }
+
+ #hover{
+   position: absolute;
+   top: 10%;
+   font-size: small;
+ }
+
+ h2{
+   margin-bottom: 20px;
+ }
+ span{
+   display: block;
+   margin-top: 3%;
+ }
+
+ #padded{
+   padding-top: 30%;
+ }
+
+ nav{
+   position: fixed;
+   width: 20%;
+   height: 200px;
+   top: 25%;
+   left:1%;
+   font-size: larger;
+ }
+ nav a{
+   text-decoration: none;
+   color: var(--main-text);
+   
+ }
+ nav input{
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+ }
+ main{
+   top: 25%;
+   margin-top: 2%;
+ }
+ .book{
+   display: flex;
+   width: 25%; 
+   height: 200px;
+   border: 2px solid #42218d;
+   background-color: #42218d;
+   padding-bottom: 20%;
+   border-radius: 40px 0 40px 0;
+ }
+ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
+
+  
+ .icon-1{
+  margin-top: 100%;
+}
+
+.box{
+margin: 10%x auto;
+width: 140%;
+height: 50px;
+margin-top: 26%;
+display: flex;
+flex-direction: column;
+}
 
 .container-1 input#search{
-  width: 50px;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  color: #262626;
-  padding-left: 35px;
-  border-radius: 5px;
-  border-radius: 5px;
-  border-radius: 5px;
-  color: #fff;
- 
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
+width: 10%;
+height: 50px;
+background: #2b303b;
+border: none;
+font-size: 10pt;
+float: left;
+color: #262626;
+padding-left: 11%;
+border-radius: 5px;
+border-radius: 5px;
+border-radius: 5px;
+color: #fff;
+
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
 }
 .container-1 h1#search{
-  box-shadow: 3px 3px 2px black;
-  width: 45px;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  color: #262626;
-  padding-left: 10px;
-  border-radius: 5px;
-  border-radius: 5px;
-  border-radius: 5px;
-  color: #fff;
- 
-  transition: width .10s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
+box-shadow: 3px 3px 2px black;
+width: 10%;
+height: 50px;
+background: #2b303b;
+border: none;
+font-size: 10pt;
+float: left;
+color: #262626;
+padding-left: 10px;
+border-radius: 5px;
+border-radius: 5px;
+border-radius: 5px;
+color: #fff;
+
+transition: width .10s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
 }
 .container-1 h2#search{
-  box-shadow: 3px 3px 2px black;
-  width: 45px;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  color: #262626;
-  padding-left: 10px;
-  border-radius: 5px;
-  border-radius: 5px;
-  border-radius: 5px;
-  color: #fff;
- 
-  transition: width .10s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
+box-shadow: 3px 3px 2px black;
+width: 10%;
+height: 50px;
+background: #2b303b;
+border: none;
+font-size: 10pt;
+float: left;
+color: #262626;
+padding-left: 10px;
+border-radius: 5px;
+border-radius: 5px;
+border-radius: 5px;
+color: #fff;
+
+transition: width .10s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
 }
 
 
 .container-1 .icon{
-  position: absolute;
-  top: 50%;
-  margin-left: 17px;
-  margin-top: 17px;
-  z-index: 1;
-  color: #4f5b66;
+position: absolute;
+top: 43%;
+margin-left: 6%;
+margin-top: 6%;
+z-index: 1;
+color: #4f5b66;
 }
 .container-1 .icon-1{
-  position: absolute;
-  top: 81%;
-  height: 100px;
-  margin-left: 17px;
-  margin-top: 17px;
-  z-index: 1;
-  color: #4f5b66;
+position: absolute;
+top: 73%;
+height: 100px;
+margin-left: 6%;
+margin-top: 6%;
+z-index: 1;
+color: #4f5b66;
 }
 
 .container-1 .icon-2{
-  display: block;
-  position: absolute;
-  top: 117%;
-  height: 100px;
-  margin-left: 5%;
-  margin-top: 17px;
-  z-index: 1;
-  color: #4f5b66;
+display: block;
+position: absolute;
+top: 110%;
+height: 100px;
+margin-left: 5%;
+margin-top: 6%;
+z-index: 1;
+color: #4f5b66;
 }
 
 
 /* :focus типу пр  натиску що буде відбуватись */
 
 .container-1 input#search:focus, .container-2 input#search:active{
-  /* outline це підсвічування границі кнопки й задаємо none без видимої границі */
-  outline:none;
-  width: 300px;
+/* outline це підсвічування границі кнопки й задаємо none без видимої границі */
+outline:none;
+width:70%;
 }
 
 .container-1 input#search:focus, .container-2 h1#search:active{
-  /* outline це підсвічування границі кнопки й задаємо none без видимої границі */
-  outline:none;
-  width: 300px;
+/* outline це підсвічування границі кнопки й задаємо none без видимої границі */
+outline:none;
+width: 70%;
 }
 .container-1 input#search:focus, .container-2 h2#search:active{
-  /* outline це підсвічування границі кнопки й задаємо none без видимої границі */
-  outline:none;
-  width: 300px;
+/* outline це підсвічування границі кнопки й задаємо none без видимої границі */
+outline:none;
+width: 70%;
 }
 
 /* :hover спрацьовує, коли користувач наводить елемент мишею, але не обов'язково активує його */
 .container-1:hover input#search{
-width: 300px;
+width: 70%;
 }
 .container-1:hover h1#search{
-  width: 300px;
+width: 70%;
+}
+.container-1:hover h2#search{
+  width: 70%;
   }
-  .container-1:hover h2#search{
-    width: 300px;
-    }
 /* :hover спрацьовує, коли користувач наводить елемент мишею, але не обов'язково активує його */
 
- 
+
 .container-1:hover .icon{
-  color: #93a2ad;
+color: #93a2ad;
 }
 .container-1:hover .icon-1{
-  color: #93a2ad;
+color: #93a2ad;
 }
 .container-1:hover .icon-2{
-  color: #93a2ad;
+color: #93a2ad;
 }
 
 /* КІНЕЦЬ КІНЕЦЬ КІНЕЦЬ СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
@@ -247,173 +330,174 @@ width: 300px;
 
 /* ПОЧАТОК БАНЕР */ /* ПОЧАТОК БАНЕР */ /* ПОЧАТОК БАНЕР */ /* ПОЧАТОК БАНЕР */
 .slides {
-  height:200px;
-  width: 10px;
-  margin-left: 30%;
-  overflow:hidden;
+height:200px;
+width: 3%;
+margin-left: 30%;
+
+overflow:hidden;
+position:relative;
+width:auto;
+}
+.slides ul {
+  list-style:none;
   position:relative;
-  width:auto;
-  }
-  .slides ul {
-    list-style:none;
-    position:relative;
-  }
+}
 
-  /* keyframes */
-  @-webkit-keyframes anim_slides {
-  0% {
-  opacity:0;
-  }
-  6% {
-  opacity:1;
-  }
-  24% {
-  opacity:1;
-  }
-  30% {
-  opacity:0;
-  }
-  100% {
-  opacity:0;
-  }
-  }
-  @-moz-keyframes anim_slides {
-  0% {
-  opacity:0;
-  }
-  6% {
-  opacity:1;
-  }
-  24% {
-  opacity:1;
-  }
-  30% {
-  opacity:0;
-  }
-  100% {
-  opacity:0;
-  }
-  }
-      
-  .slides ul li {
-  opacity:0;
-  position:absolute;
-  top:0;
-
-  /*  animation */
-  animation-name: anim_slides;
-  animation-duration: 24.0s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-delay: 0;
-  /* анімація переміщення */
-  animation-play-state: running;
-  animation-fill-mode: forwards;
+/* keyframes */
+@-webkit-keyframes anim_slides {
+0% {
+opacity:0;
+}
+6% {
+opacity:1;
+}
+24% {
+opacity:1;
+}
+30% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+@-moz-keyframes anim_slides {
+0% {
+opacity:0;
+}
+6% {
+opacity:1;
+}
+24% {
+opacity:1;
+}
+30% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
     
-  animation-name: anim_slides;
-  animation-duration: 24.0s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-delay: 0;
-  animation-play-state: running;
-  animation-fill-mode: forwards;
-  }
+.slides ul li {
+opacity:0;
+position:absolute;
+top:0;
 
-  /*  селектор вибирає дочірні елементи відповідно до їхньої позиції серед усіх однорідних елементів у батьківському елементі.:nth-child() */
-  .slides ul li:nth-child(2), .slides ul li:nth-child(2) div {
-    animation-delay: 6.0s;
-    animation-delay: 6.0s;
-    }
-  .slides ul li:nth-child(3), .slides ul li:nth-child(3) div {
-    animation-delay: 12.0s;
-    animation-delay: 12.0s;
-    }
-  .slides ul li:nth-child(4), .slides ul li:nth-child(4) div {
-    animation-delay: 18.0s;
-    animation-delay: 18.0s;
-    }
-  .slides ul li img {
-    display:block;
-    }
-      
-  /* keyframes */
-  @-webkit-keyframes anim_titles {
-  0% {
-  left:100%;
-  opacity:0;
-  }
-  5% {
-  left:10%;
-  opacity:1;
-  }
-  20% {
-  left:10%;
-  opacity:1;
-  }
-  25% {
-  left:100%;
-  opacity:0;
-  }
-  100% {
-  left:100%;
-  opacity:0;
-  }
-  }
-  @-moz-keyframes anim_titles {
-  0% {
-  left:100%;
-  opacity:0;
-  }
-  5% {
-  left:10%;
-      opacity:1;
-  }
-  20% {
-  left:10%;
-      opacity:1;
-  }
-  25% {
-  left:100%;
-  opacity:0;
-  }
-  100% {
-  left:100%;
-  opacity:0;
-  }
-  }
-      
-  .slides ul li div {
-  background-color:#6D5DE2;
-  border-radius:10px 10px 10px 10px;
-  box-shadow:0 0 5px #FFFFFF inset;
-  color:#FFFFFF;
-  font-size:26px;
-  left:10%;
-  margin:0 auto;
-  padding:50px;
-  position:absolute;
-  top:50%;
-  width:600px;
-      
+/*  animation */
+animation-name: anim_slides;
+animation-duration: 24.0s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-delay: 0;
+/* анімація переміщення */
+animation-play-state: running;
+animation-fill-mode: forwards;
+  
+animation-name: anim_slides;
+animation-duration: 24.0s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+}
 
-  animation-name: anim_titles;
-  animation-duration: 24.0s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-delay: 0;
-  animation-play-state: running;
-  animation-fill-mode: forwards;
-      
-  animation-name: anim_titles;
-  animation-duration: 24.0s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-delay: 0;
-  animation-play-state: running;
-  animation-fill-mode: forwards;
+/*  селектор вибирає дочірні елементи відповідно до їхньої позиції серед усіх однорідних елементів у батьківському елементі.:nth-child() */
+.slides ul li:nth-child(2), .slides ul li:nth-child(2) div {
+  animation-delay: 6.0s;
+  animation-delay: 6.0s;
   }
-  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */
+.slides ul li:nth-child(3), .slides ul li:nth-child(3) div {
+  animation-delay: 12.0s;
+  animation-delay: 12.0s;
+  }
+.slides ul li:nth-child(4), .slides ul li:nth-child(4) div {
+  animation-delay: 18.0s;
+  animation-delay: 18.0s;
+  }
+.slides ul li img {
+  display:block;
+  }
+    
+/* keyframes */
+@-webkit-keyframes anim_titles {
+0% {
+left:100%;
+opacity:0;
+}
+5% {
+left:10%;
+opacity:1;
+}
+20% {
+left:10%;
+opacity:1;
+}
+25% {
+left:100%;
+opacity:0;
+}
+100% {
+left:100%;
+opacity:0;
+}
+}
+@-moz-keyframes anim_titles {
+0% {
+left:100%;
+opacity:0;
+}
+5% {
+left:10%;
+    opacity:1;
+}
+20% {
+left:10%;
+    opacity:1;
+}
+25% {
+left:100%;
+opacity:0;
+}
+100% {
+left:100%;
+opacity:0;
+}
+}
+    
+.slides ul li div {
+background-color:#6D5DE2;
+border-radius:10px 10px 10px 10px;
+box-shadow:0 0 5px #FFFFFF inset;
+color:#FFFFFF;
+font-size:26px;
+left:10%;
+margin:0 auto;
+padding:50px;
+position:absolute;
+top:50%;
+width:600px;
+    
+
+animation-name: anim_titles;
+animation-duration: 24.0s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+    
+animation-name: anim_titles;
+animation-duration: 24.0s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+}
+/* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */
