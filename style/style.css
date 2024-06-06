@@ -12,20 +12,23 @@
   /* колір роздільника */
   --color-separator:#BDBDBD;
  }
+
  body {
+  position: relative;
    background-color: var(--main-dark);
    color: var(--main-text);
-   font-family: Roboto, sanserif;
+  
  }
- .baner-body{
-  display: flex;
-  flex-direction: row;
+ @font-face {
+  font-family: "Roboto Regular";
+  src: url("../style/LXGWWenKaiMonoTC-Bold.ttf");
 }
-
 
 header{
   display: flex;
   flex-direction: column;
+  position: relative;
+  
    
 }
 header img{
@@ -35,6 +38,14 @@ header img{
   box-shadow: 3px 3px 2px black;
   border-radius: 32px;
 }
+
+
+.baner-body{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
 nav{
   position: fixed;
   width: 20%;
@@ -46,13 +57,7 @@ nav{
 nav a{
   text-decoration: none;
   display: flex;
-
   color: var(--main-text);
-
-
-
-  
-  
 }
 nav input{
   box-shadow: 3px 3px 2px black;
@@ -163,6 +168,11 @@ nav input{
  main{
    top: 25%;
    margin-top: 2%;
+ }
+ #new{
+  position: relative;
+  left: 22%;
+  width: 70%;
  }
  .book{
    display: flex;
