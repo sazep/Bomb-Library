@@ -1,19 +1,7 @@
-fetch('/data/new.json')
-    .then((response) => response.json())
-    .then((json) =>{ 
-      // Object.keys(json).length
-      const templateText = $('#template').html();
-      const hbTemplate = Handlebars.compile(templateText);
-        
-        $('#new').html(hbTemplate(json));
-})
-
-fetch('/data/popular.json')
-    .then((response) => response.json())
-    .then((json) =>{ 
-  
-const templateText = $('#template').html();
-const hbTemplate = Handlebars.compile(templateText);
-  
-  $('#popular').html(hbTemplate(json));
-})
+fetch("/data/new.json")
+    .then((res)=>res.json())
+    .then((dta)=>{
+        const temp = $("#book").html()
+        const htTemp = Handlebars.compile(temp)
+        $("#new").html(htTemp(dta))
+    })

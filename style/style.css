@@ -1,19 +1,455 @@
 :root {
-   /* Основний темний колір */
-   --main-dark: #512DA8 ;
-   /* Основний світлий колір */
-   --main-light:#D1C4E9;
-   /* колір акценту */
-   --color-accent:#536DFE ;
-   /* колір основного тексту */
-   --main-text:#212121;
-   /*  колір другорядного тексту */
-   --other-text:#757575;
-   /* колір роздільника */
-   --color-separator:#BDBDBD;
-  }
-  body {
-    background-color: var(--main-dark);
-    color: var(--main-text);
+  /* Основний темний колір */
+  --main-dark: #512DA8 ;
+  /* Основний світлий колір */
+  --main-text:#D1C4E9;
+  /* колір акценту */
+  --color-accent:#536DFE ;
+  /* колір основного тексту */
+  --main-light:#212121;
+  /*  колір другорядного тексту */
+  --other-text:#757575;
+  /* колір роздільника */
+  --color-separator:#BDBDBD;
+ }
+
+ body {
+  position: relative;
+   background-color: var(--main-dark);
+   color: var(--main-text);
+  
+ }
+ @font-face {
+  font-family: "Roboto Regular";
+  src: url("../style/LXGWWenKaiMonoTC-Bold.ttf");
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
    
+}
+header img{
+  margin-right: 4%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 3px 3px 2px black;
+  border-radius: 32px;
+}
+
+
+.baner-body{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+nav{
+  position: fixed;
+  width: 20%;
+  height: 200px;
+  top: 20%;
+  left: 1%;
+  font-size: large;
+}
+nav a{
+  text-decoration: none;
+  display: flex;
+  color: var(--main-text);
+}
+nav input{
+  box-shadow: 3px 3px 2px black;
+  height: 15%;
+  width: 60%;
+}
+ .hover{
+   padding-left:120px;
+   padding-right:140px;
+   box-shadow: inset 0 0 0 0 #000000;
+   color: var(--main-text);
+   transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+   border-radius:0 10px 10px 0;
+   
+ }
+ .hover:hover {
+   box-shadow: inset 1100px 10px 10px 100px var(--main-text);
+   color: var(--main-dark);
+   border-radius:0 10px 10px 0;
+ }
+/* stle for card book in index.html */
+#new{
+  position: relative;
+  width: 70%;
+  background-color: var(--main-dark);
+  border-radius: 40px 0 40px 0;
+  display: flex;
+  justify-content: space-evenly;
+  left: 22%;
+ }
+
+
+.book{
+  position: relative;
+  width: 25%;
+  height: 350px;
+ 
+  cursor: pointer;
+  box-shadow: 3px 3px 3px 0 var(--main-light);
+}
+.book img{
+width: 100%;
+height: 350px;
+}
+.back,.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.7s linear;
+}
+.book:hover > .front{
+  transform: perspective(600px) rotateY(180deg);
+}
+.book:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
+.front{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back{
+  background-color: var(--main-text);
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+  width: 100%;
+  padding: 0.5%;
+}
+.center{
+ 
+  text-align: center;
+}
+ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
+
+  
+
+.box{
+margin: 10%x auto;
+width: 140%;
+height: 50px;
+margin-top: 26%;
+display: flex;
+flex-direction: column;
+}
+
+.container-1 input#search{
+width: 15%;
+height: 50px;
+background: #2b303b;
+border: none;
+font-size: 10pt;
+float: left;
+color: #262626;
+padding-left: 11%;
+border-radius: 5px;
+border-radius: 5px;
+border-radius: 5px;
+color: #fff;
+
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+}
+.container-1 h1#search{
+box-shadow: 3px 3px 2px black;
+width: 12%;
+height: 50px;
+background: #2b303b;
+border: none;
+font-size: 10pt;
+float: left;
+color: #262626;
+padding-left: 10px;
+border-radius: 5px;
+border-radius: 5px;
+border-radius: 5px;
+color: #fff;
+
+transition: width .10s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+}
+.container-1 h2#search{
+box-shadow: 3px 3px 2px black;
+width: 12%;
+height: 50px;
+background: #2b303b;
+border: none;
+font-size: 10pt;
+float: left;
+color: #262626;
+padding-left: 10px;
+border-radius: 5px;
+border-radius: 5px;
+border-radius: 5px;
+color: #fff;
+
+transition: width .10s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+transition: width .55s ease;
+}
+
+
+.container-1 .icon{
+position: absolute;
+top: 38%;
+left: 5%;
+z-index: 1;
+color: #4f5b66;
+}
+.container-1 .icon-1{
+position: absolute;
+top: 71%;
+height: 100px;
+left: 5%;
+z-index: 1;
+color: #4f5b66;
+}
+
+.container-1 .icon-2{
+display: block;
+position: absolute;
+top: 104%;
+height: 100px;
+left: 5%;
+z-index: 1;
+color: #4f5b66;
+}
+
+
+/* :focus типу пр  натиску що буде відбуватись */
+
+.container-1 input#search:focus, .container-2 input#search:active{
+/* outline це підсвічування границі кнопки й задаємо none без видимої границі */
+outline:none;
+width:70%;
+}
+
+.container-1 input#search:focus, .container-2 h1#search:active{
+/* outline це підсвічування границі кнопки й задаємо none без видимої границі */
+outline:none;
+width: 70%;
+}
+.container-1 input#search:focus, .container-2 h2#search:active{
+/* outline це підсвічування границі кнопки й задаємо none без видимої границі */
+outline:none;
+width: 70%;
+}
+
+/* :hover спрацьовує, коли користувач наводить елемент мишею, але не обов'язково активує його */
+.container-1:hover input#search{
+width: 70%;
+}
+.container-1:hover h1#search{
+width: 70%;
+}
+.container-1:hover h2#search{
+  width: 70%;
   }
+/* :hover спрацьовує, коли користувач наводить елемент мишею, але не обов'язково активує його */
+
+
+.container-1:hover .icon{
+color: #93a2ad;
+}
+.container-1:hover .icon-1{
+color: #93a2ad;
+}
+.container-1:hover .icon-2{
+color: #93a2ad;
+}
+
+/* КІНЕЦЬ КІНЕЦЬ КІНЕЦЬ СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
+
+
+/* ПОЧАТОК БАНЕР */ /* ПОЧАТОК БАНЕР */ /* ПОЧАТОК БАНЕР */ /* ПОЧАТОК БАНЕР */
+.slides {
+height:200px;
+width: 3%;
+margin-left: 22%;
+
+overflow:hidden;
+position:relative;
+width:auto;
+}
+.slides ul {
+  list-style:none;
+  position:relative;
+}
+
+/* keyframes */
+@-webkit-keyframes anim_slides {
+0% {
+opacity:0;
+}
+6% {
+opacity:1;
+}
+24% {
+opacity:1;
+}
+30% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+@-moz-keyframes anim_slides {
+0% {
+opacity:0;
+}
+6% {
+opacity:1;
+}
+24% {
+opacity:1;
+}
+30% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+    
+.slides ul li {
+opacity:0;
+position:absolute;
+top:0;
+
+/*  animation */
+animation-name: anim_slides;
+animation-duration: 24.0s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-delay: 0;
+/* анімація переміщення */
+animation-play-state: running;
+animation-fill-mode: forwards;
+  
+animation-name: anim_slides;
+animation-duration: 24.0s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+}
+
+/*  селектор вибирає дочірні елементи відповідно до їхньої позиції серед усіх однорідних елементів у батьківському елементі.:nth-child() */
+.slides ul li:nth-child(2), .slides ul li:nth-child(2) div {
+  animation-delay: 6.0s;
+  animation-delay: 6.0s;
+  }
+.slides ul li:nth-child(3), .slides ul li:nth-child(3) div {
+  animation-delay: 12.0s;
+  animation-delay: 12.0s;
+  }
+.slides ul li:nth-child(4), .slides ul li:nth-child(4) div {
+  animation-delay: 18.0s;
+  animation-delay: 18.0s;
+  }
+.slides ul li img {
+  display:block;
+  }
+    
+/* keyframes */
+@-webkit-keyframes anim_titles {
+0% {
+left:100%;
+opacity:0;
+}
+5% {
+left:10%;
+opacity:1;
+}
+20% {
+left:10%;
+opacity:1;
+}
+25% {
+left:100%;
+opacity:0;
+}
+100% {
+left:100%;
+opacity:0;
+}
+}
+@-moz-keyframes anim_titles {
+0% {
+left:100%;
+opacity:0;
+}
+5% {
+left:10%;
+    opacity:1;
+}
+20% {
+left:10%;
+    opacity:1;
+}
+25% {
+left:100%;
+opacity:0;
+}
+100% {
+left:100%;
+opacity:0;
+}
+}
+    
+.slides ul li div {
+background-color:#6D5DE2;
+border-radius:10px 10px 10px 10px;
+box-shadow:0 0 5px #FFFFFF inset;
+color:#FFFFFF;
+font-size:26px;
+left:10%;
+margin:0 auto;
+padding:50px;
+position:absolute;
+top:50%;
+width:600px;
+    
+
+animation-name: anim_titles;
+animation-duration: 24.0s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+    
+animation-name: anim_titles;
+animation-duration: 24.0s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+}
+/* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */
