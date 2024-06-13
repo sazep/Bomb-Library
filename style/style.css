@@ -68,7 +68,7 @@ nav{
   position: fixed;
   width: 20%;
   height: 200px;
-  margin-top: 10%;
+  top: 20%;
   left: 1%;
   font-size: large;
 }
@@ -86,16 +86,17 @@ nav input{
    padding-left:120px;
    padding-right:140px;
    box-shadow: inset 0 0 0 0 #000000;
-   color: white;
+   color: var(--main-text);
    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
    border-radius:0 10px 10px 0;
    
  } 
  .hover:hover {
-   box-shadow: inset 1100px 10px 10px 100px #f7f7f7;
-   color: #42218d;
+   box-shadow: inset 1100px 10px 10px 100px var(--main-text);
+   color: var(--main-dark);
    border-radius:0 10px 10px 0;
  }
+<<<<<<< HEAD
  
  .center{
    position: absolute;
@@ -188,25 +189,64 @@ nav input{
    margin-top: 2%;
  }
  #new{
+=======
+/* stle for card book in index.html */
+#new{
+>>>>>>> af54d717da75904c1092ddeec7b79c047278556b
   position: relative;
-  left: 22%;
   width: 70%;
+  background-color: var(--main-dark);
+  border-radius: 40px 0 40px 0;
+  display: flex;
+  justify-content: space-evenly;
+  left: 22%;
  }
- .book{
-   display: flex;
-   width: 25%; 
-   height: 200px;
-   border: 2px solid #42218d;
-   background-color: #42218d;
-   padding-bottom: 20%;
-   border-radius: 40px 0 40px 0;
- }
+
+
+.book{
+  position: relative;
+  width: 25%;
+  height: 350px;
+ 
+  cursor: pointer;
+  box-shadow: 3px 3px 3px 0 var(--main-light);
+}
+.book img{
+width: 100%;
+height: 350px;
+}
+.back,.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.7s linear;
+}
+.book:hover > .front{
+  transform: perspective(600px) rotateY(180deg);
+}
+.book:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
+.front{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back{
+  background-color: var(--main-text);
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+  width: 100%;
+  padding: 0.5%;
+}
+.center{
+ 
+  text-align: center;
+}
  /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
 
   
- .icon-1{
-  margin-top: 100%;
-}
 
 .box{
 margin: 10%x auto;
@@ -218,7 +258,7 @@ flex-direction: column;
 }
 
 .container-1 input#search{
-width: 10%;
+width: 15%;
 height: 50px;
 background: #2b303b;
 border: none;
@@ -239,7 +279,7 @@ transition: width .55s ease;
 }
 .container-1 h1#search{
 box-shadow: 3px 3px 2px black;
-width: 10%;
+width: 12%;
 height: 50px;
 background: #2b303b;
 border: none;
@@ -260,7 +300,7 @@ transition: width .55s ease;
 }
 .container-1 h2#search{
 box-shadow: 3px 3px 2px black;
-width: 10%;
+width: 12%;
 height: 50px;
 background: #2b303b;
 border: none;
@@ -283,18 +323,16 @@ transition: width .55s ease;
 
 .container-1 .icon{
 position: absolute;
-top: 43%;
-margin-left: 6%;
-margin-top: 6%;
+top: 38%;
+left: 5%;
 z-index: 1;
 color: #4f5b66;
 }
 .container-1 .icon-1{
 position: absolute;
-top: 73%;
+top: 71%;
 height: 100px;
-margin-left: 6%;
-margin-top: 6%;
+left: 5%;
 z-index: 1;
 color: #4f5b66;
 }
@@ -302,10 +340,9 @@ color: #4f5b66;
 .container-1 .icon-2{
 display: block;
 position: absolute;
-top: 110%;
+top: 104%;
 height: 100px;
-margin-left: 5%;
-margin-top: 6%;
+left: 5%;
 z-index: 1;
 color: #4f5b66;
 }
@@ -360,7 +397,7 @@ color: #93a2ad;
 .slides {
 height:200px;
 width: 3%;
-margin-left: 30%;
+margin-left: 22%;
 
 overflow:hidden;
 position:relative;

@@ -6,6 +6,7 @@
         <title>Logika Library</title>
         <link rel ="icon" href="../src/Logo.jpg">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<<<<<<< HEAD
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
         <script type="x/handlebars" id="book">
             {{#each this}}
@@ -26,6 +27,26 @@
             {{/each}}
         </script> 
        
+=======
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+       <script type="x/handlebars" id="book">
+        {{#each this}}
+        <div class="book center">
+                <div class="front">
+                    <img class="cover" src={{cover}} alt="">
+                </div>
+                <div class="back">
+                    <div class="back-content center">
+                        <h2 class="name">Назва книги: {{name}}</h2>
+                        <h2 class="author">Автор:{{author}}</h2>
+                        <span class="about">{{anthocium}}</span>
+                        <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
+                    </div>
+            </div>
+        </div>
+            {{/each}}
+       </script>
+>>>>>>> af54d717da75904c1092ddeec7b79c047278556b
      </head>
      <body>
          
@@ -73,22 +94,18 @@
  
  
          </nav>
-        <!-- <header>
-            <div class="hover">
-                <h1 id="padded">LOOgiK</h1>
-                <h1  id="hover">НІКОЛИ НЕ ПІЗНО СТАТИ ОРИГІНАЛОМ.</h1>
-                <div class="image">
-                    <img src="../src/sova.jpg">
-                </div>
-            </div>
-        </header> -->
+   
         <main>
             <!-- <h1 class="navigata">Новинки</h1> -->
             <section id="new">
                 
+<<<<<<< HEAD
             </section>
             <!-- <h1 class="navig">Популярні</h1> -->
             <section id="popular">
+=======
+             
+>>>>>>> af54d717da75904c1092ddeec7b79c047278556b
             </section>
         </main>
         <footer>
