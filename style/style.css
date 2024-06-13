@@ -95,6 +95,7 @@
   
   .icon-1{
     margin-top: 100%;
+
   }
 
 .box{
@@ -418,3 +419,43 @@ width: 70%;
   animation-fill-mode: forwards;
   }
   /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */
+
+  /* ПОЧАТОК СТИЛІ ДЛЯ ALL_BOOKS */  /* ПОЧАТОК СТИЛІ ДЛЯ ALL_BOOKS */  /* ПОЧАТОК СТИЛІ ДЛЯ ALL_BOOKS */
+  .all_books{
+    display: flex;
+    flex-direction: column;
+  
+  }
+
+  .leftimg {
+    float:left; /* Вирівнювання по лівому краю */
+    margin: 7px 7px 7px 0; /* Відступи навколо картинки */
+    text-decoration: none;
+    margin-left: 30%;
+    }
+  p{
+    text-decoration: none;
+    display:block;
+    flex-direction:initial;
+    font-size: 35px;
+    margin-right: 20%;
+    color:var(--main-text)
+    
+  }
+  a:link {
+    text-decoration: none;
+}
+hr {
+  border: none;
+  border-top: 15px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 20px;
+}
+
+hr::after {
+  background: #512DA8;
+  position: relative;
+  top: -13px;
+}
