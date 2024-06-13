@@ -15,8 +15,8 @@
 
  body {
   position: relative;
-   background-color: var(--main-dark);
-   color: var(--main-text);
+  background-color: var(--main-dark);
+  color: var(--main-text);
   
  }
  @font-face {
@@ -28,9 +28,27 @@ header{
   display: flex;
   flex-direction: column;
   position: relative;
-  
-   
 }
+
+#icoon{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.navig{
+  color: var(--main-text);
+  text-decoration: none;
+  position: relative;
+  bottom: 550px;
+  left: 20%;
+}
+.navigata{
+  color: var(--main-text);
+  text-decoration: none;
+  position: relative;
+  bottom: 550px;
+}
+
+
 header img{
   margin-right: 4%;
   width: 60px;
@@ -72,13 +90,13 @@ nav input{
    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
    border-radius:0 10px 10px 0;
    
- }
+ } 
  .hover:hover {
    box-shadow: inset 1100px 10px 10px 100px #f7f7f7;
    color: #42218d;
    border-radius:0 10px 10px 0;
  }
-
+ 
  .center{
    position: absolute;
    top:55%;
