@@ -7,4 +7,11 @@ fetch("/data/new.json")
     })
     .catch((error) => console.error('Error:', error));
 
-
+fetch("/data/popular.json")
+    .then((res) => res.json())
+    .then((data) => {
+        const temp = $('#book').html();
+        const hb_temp = Handlebars.compile(temp);
+        $("#popular").html(hb_temp(data));
+    })
+    .catch((error) => console.error('Error:', error));
