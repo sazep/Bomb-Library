@@ -11,12 +11,30 @@
   --other-text:#757575;
   /* колір роздільника */
   --color-separator:#BDBDBD;
+  --primary: #3ECF8E;
+  --primary-dark: #37996B;
+  --primary-darker: #317F5A;
+  --headline-color: #F9F9F9;
+  --text-color: #7E7E7E;
+  --bg:#1C1C1C;
+  --footer-bg:#161616;
+  --secondary:#2E2E2E;
+  --footer-border:#3E3E3E;
+  --gray-border-hover:#505050;
+  --gray-menu-button:#7E7E7E;
+  --gray-menu-button-hover:#232323;
+  --navbar-height: 64px;
+  --gray-text-hover:#8F8F8F;
+  --gray-icon: #A0A0A0;
+  --footer-width: 64rem;
  }
 
  body {
   position: relative;
-   background-color: var(--main-dark);
-   color: var(--main-text);
+  background-color: var(--main-dark);
+  color: var(--main-text);
+  overflow: auto;
+  min-width: 18rem;
   
  }
  @font-face {
@@ -37,6 +55,9 @@ header img{
   height: 60px;
   box-shadow: 3px 3px 2px black;
   border-radius: 32px;
+}
+main{
+  height: 100%;
 }
 
 
@@ -94,13 +115,12 @@ nav input{
   position: relative;
   width: 25%;
   height: 350px;
- 
   cursor: pointer;
-  box-shadow: 3px 3px 3px 0 var(--main-light);
 }
 .book img{
-width: 100%;
-height: 350px;
+  width: 100%;
+  height: 450px;
+  box-shadow: 3px 3px 3px 0 var(--main-light);
 }
 .back,.front{
   position: absolute;
@@ -145,12 +165,13 @@ flex-direction: column;
 }
 
 .container-1 input#search{
-width: 15%;
+width: 12%;
 height: 50px;
 background: #2b303b;
 border: none;
 font-size: 10pt;
 float: left;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 color: #262626;
 padding-left: 11%;
 border-radius: 5px;
@@ -165,7 +186,7 @@ transition: width .55s ease;
 transition: width .55s ease;
 }
 .container-1 h1#search{
-box-shadow: 3px 3px 2px black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 width: 12%;
 height: 50px;
 background: #2b303b;
@@ -186,7 +207,7 @@ transition: width .55s ease;
 transition: width .55s ease;
 }
 .container-1 h2#search{
-box-shadow: 3px 3px 2px black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 width: 12%;
 height: 50px;
 background: #2b303b;
@@ -210,14 +231,14 @@ transition: width .55s ease;
 
 .container-1 .icon{
 position: absolute;
-top: 38%;
+top: 62%;
 left: 5%;
 z-index: 1;
 color: #4f5b66;
 }
 .container-1 .icon-1{
 position: absolute;
-top: 71%;
+top: 93%;
 height: 100px;
 left: 5%;
 z-index: 1;
@@ -227,7 +248,7 @@ color: #4f5b66;
 .container-1 .icon-2{
 display: block;
 position: absolute;
-top: 104%;
+top: 130%;
 height: 100px;
 left: 5%;
 z-index: 1;
@@ -453,3 +474,92 @@ animation-play-state: running;
 animation-fill-mode: forwards;
 }
 /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  background: var(--footer-bg);
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+*::selection{
+  background: var(--primary);
+  color: var(--footer-bg);
+}
+.footer-wraper{
+  display: flex;
+  flex-direction: column;
+  max-width: var(--footer-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.footer-columns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap:wrap;
+  padding-top: 1rem;
+}
+
+.footer-logo-column{
+  padding-right: 10%;
+}
+
+.footer-logo{
+  margin-bottom: 1.5rem;
+  width: 14rem;
+}
+.social-wraper{
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}.social-wraper a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.social-links svg{
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke: var(--text-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.social-links svg:hover{
+  stroke: var(--headline-color);  
+}
+
+.social-links ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style-type: none;
+}
+
+.link-columns{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+.link-columns>div{
+  flex-grow: 1;
+  display: flex;
+  gap: 2rem;
+}
+
+.link-columns>div>section{
+  min-width: 8rem;
+  width: 50%;
+}
