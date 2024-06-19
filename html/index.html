@@ -11,7 +11,7 @@
         {{#each this}}
         <div class="book center">
                 <div class="front">
-                    <img class="cover" src="avatar.jpg" alt="">
+                    <img class="cover" src={{cover}} alt="">
                 </div>
                 <div class="back">
                     <div class="back-content center">
@@ -28,7 +28,7 @@
      <body>
          
          <header>
-             <img id="icoon" src = "../src/logo.jpg">
+             <img src = "../src/logo.jpg">
              <h1>Logika Library</h1>
          </header>
          <div class="slides">
@@ -56,13 +56,14 @@
                              <input type="search" id="search" placeholder="Пошук..." />
                          </div>
          
-               
                          <div class="container-1">
-                            <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw" aria-hidden="true"></i></span></a>
+                             <span class="icon-1"><a class="list-group-item" href="#"></a><i class="fa fa-book fa-fw" aria-hidden="true"></i></span>
+                             <h1 type="search" id="search" placeholder="Пошук..."> </h1>
                          </div>
  
                          <div class="container-1">
-                                <span class="icon-2"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
+                             <span class="icon-2"><a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;</i></span>
+                             <h2 type="search" id="search" placeholder="Пошук..."> </h2>
                          </div>
      
                  </div>
@@ -85,8 +86,9 @@
                 <div class="footer-columns">
                     <div class="footer-logo-column"></div>
                     <a href="/" aria-label="Go to LOOgiK Homepage" title ="Go to LOOgiK Homepage">
-                        <img src="../src/Logo.jpg" loading="lazy" alt="Supabase logo" class="footre-logo" width="1z00">
+                        <img src="../src/Logo.jpg" loading="lazy" alt="LOOgiK logo" class="footer-logo">
                     </a>
+                    <h2 class="footer-name">Logika Library</h2>
                     <div class="social-wraper">
                         <div class="social-links">
                             <ul>
@@ -116,10 +118,94 @@
                     <div class="link-columns">
                         <div>
                             <section>
-                                <h3>Info</h3>
+                                <h3>Програмісти</h3>
                                 <ul>
                                     <li>
-                                        <a href="#" title="Features">Database</a>
+                                        <a href="#" title="Features">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Пропозиції</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Скарги</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Оцінка</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Пропозиції</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h3>Програмісти</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Features">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Пропозиції</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Скарги</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Оцінка</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Пропозиції</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h3>Програмісти</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Features">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Пропозиції</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Скарги</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Оцінка</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Пропозиції</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h3>Програмісти</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Features">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Пропозиції</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Скарги</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Оцінка</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Features">Пропозиції</a>
                                     </li>
                                 </ul>
                             </section>
@@ -129,14 +215,14 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-wraper">
-                    <small>©<span id="year"></span>LOOgiK Inc.</small>
+                    <small>©<span id="year"></span> LOOgiK Inc.</small>
                 </div>
             </div>
 
         </footer>
         <script>
             document.getElementById('year').innerHTML = new Date().getFullYear()
-            </script>
+        </script>
         <script type="module" src="../index.js"></script>
     </body>
 </html>
