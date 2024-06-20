@@ -6,7 +6,7 @@ fetch("/data/new.json")
         $("#new").html(htTemp(data))
     })
 
-    fetch("/data/popular.json")
+fetch("/data/popular.json")
     .then((res)=>res.json())
     .then((data)=>{
         const temp = $("#book").html()

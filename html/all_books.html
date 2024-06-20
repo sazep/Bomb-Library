@@ -1,89 +1,77 @@
-
 <html>
 
 <head>
   <link rel="stylesheet" href="../style/style.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <title>Logika Library</title>
-  <link rel ="icon" href="../src/Logo.jpg">
+  <link rel="icon" href="../src/Logo.jpg">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script type="x/handlebars" id="onebook">
-    {{#each this}}
-      <div class="onebook">
-        <img src="{{cover}}" alt="">
-        <div class="infobook">
-          <p><span>Назва:</span>{{name}}</p>
-          <p><span>Автор:</span>{{author}}</p>
-          <p><span>Мова:</span>{{ln}}</p>
-          <p><span>Жанр:</span>{{genre}}</p>
-          <p><span>Опис:</span>{{anthocium}}</p>
+      {{#each this}}
+        <div class="onebook">
+          <img src="{{cover}}" alt="">
+          <div class="infobook">
+            <p><span>Назва:</span>{{name}}</p>
+            <p><span>Автор:</span>{{author}}</p>
+            <p><span>Мова:</span>{{ln}}</p>
+            <p><span>Жанр:</span>{{genre}}</p>
+            <p><span>Опис:</span>{{anthocium}}</p>
+          </div>
         </div>
-      </div>
-    {{/each}}
- </script>
+      {{/each}}
+  </script>
 </head>
 
 <body>
   <nav>
- 
     <div class="box">
-            <div class="container-1">
-              <span class="icon"><i class="fa fa-search"></i></span>
-              <input type="search" id="search" placeholder="Пошук..." />
-            </div>
+      <div class="container-1">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <input type="search" id="search" placeholder="Пошук..." />
+      </div>
 
-  
-            <div class="container-1">
-              <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw" aria-hidden="true"></i></span></a>
-            </div>
 
-            <div class="container-1">
-              <span class="icon-2"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
-            </div>
+      <div class="container-1">
+        <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw"
+              aria-hidden="true"></i></span></a>
+      </div>
 
+      <div class="container-1">
+        <span class="icon-2"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <img id="icoon" src="../src/logo.jpg">
+    <h1>Logika Library</h1>
+  </header>
+  <main>
+
+    <section id="allbooks">
+
+    </section>
+    <div class="pages">
+      <i class="fa fa-arrow-left before" aria-hidden="true"></i>
+      <p class="page">2</p>
+      <i class="fa fa-arrow-right next" aria-hidden="true"></i>
     </div>
 
-
-</nav>
-<header>
-  <img id="icoon" src = "../src/logo.jpg">
-  <h1>Logika Library</h1>
-</header>
-<main>
-
-  <section id="allbooks">
-
-</section>
-<div class="pages">
-  <i class="fa fa-arrow-left before" aria-hidden="true"></i>
-  <p class="page">2</p>
-  <i class="fa fa-arrow-right next" aria-hidden="true"></i>
-</div>
-
-</main>
-<footer>
-  <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
+  </main>
+  <footer>
+    <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
       <div class="filled"></div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="50"
-        height="50"
-        fill="currentColor"
-        class="bi bi-github"
-        viewBox="0 0 16 16"
-        xml:space="preserve"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-github"
+        viewBox="0 0 16 16" xml:space="preserve">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-          fill="currentColor"
-        ></path>
+          fill="currentColor"></path>
       </svg>
     </a>
     <div class="tooltip">GitHub</div>
-  </li>
-</footer>
-<script type="module" src="../all_books.js"></script>
+    </li>
+  </footer>
+  <script type="module" src="../all_books.js"></script>
 </body>
 
 </html>
