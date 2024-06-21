@@ -15,8 +15,8 @@
 
  body {
   position: relative;
-   background-color: var(--main-dark);
-   color: var(--main-text);
+  background-color: var(--main-dark);
+  color: var(--main-text);
   
  }
  @font-face {
@@ -28,9 +28,27 @@ header{
   display: flex;
   flex-direction: column;
   position: relative;
-  
-   
 }
+
+#icoon{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.navig{
+  color: var(--main-text);
+  text-decoration: none;
+  position: relative;
+  bottom: 550px;
+  left: 20%;
+}
+.navigata{
+  color: var(--main-text);
+  text-decoration: none;
+  position: relative;
+  bottom: 550px;
+}
+
+
 header img{
   margin-right: 4%;
   width: 60px;
@@ -46,24 +64,7 @@ header img{
   flex-direction: row;
 }
 
-nav{
-  position: fixed;
-  width: 20%;
-  height: 200px;
-  top: 20%;
-  left: 1%;
-  font-size: large;
-}
-nav a{
-  text-decoration: none;
-  display: flex;
-  color: var(--main-text);
-}
-nav input{
-  box-shadow: 3px 3px 2px black;
-  height: 15%;
-  width: 60%;
-}
+
  .hover{
    padding-left:120px;
    padding-right:140px;
@@ -72,14 +73,16 @@ nav input{
    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
    border-radius:0 10px 10px 0;
    
- }
+ } 
  .hover:hover {
    box-shadow: inset 1100px 10px 10px 100px var(--main-text);
    color: var(--main-dark);
    border-radius:0 10px 10px 0;
  }
 /* stle for card book in index.html */
-#new{
+#new,
+#popular,
+#allbooks{
   position: relative;
   width: 70%;
   background-color: var(--main-dark);
@@ -94,9 +97,8 @@ nav input{
   position: relative;
   width: 25%;
   height: 350px;
- 
   cursor: pointer;
-  box-shadow: 3px 3px 3px 0 var(--main-light);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 .book img{
 width: 100%;
@@ -120,163 +122,108 @@ height: 350px;
   transform: perspective(600px) rotateY(0deg);
 }
 .back{
-  background-color: var(--main-text);
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(128,10,224,1) 50%);
   transform: perspective(600px) rotateY(180deg);
+  color: #f5f5f5;
 }
 .back-content{
   width: 100%;
   padding: 0.5%;
+  font-size: small;
+  padding-top: 20%;
 }
 .center{
- 
   text-align: center;
 }
  /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
 
+ nav,.box{
+  position: fixed;
+  width: 20%;
+  height: 200px;
+  top: 22%;
+  left: -5%;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
   
-
-.box{
-margin: 10%x auto;
-width: 140%;
-height: 50px;
-margin-top: 26%;
-display: flex;
-flex-direction: column;
 }
 
-.container-1 input#search{
-width: 15%;
-height: 50px;
-background: #2b303b;
-border: none;
-font-size: 10pt;
-float: left;
-color: #262626;
-padding-left: 11%;
-border-radius: 5px;
-border-radius: 5px;
-border-radius: 5px;
-color: #fff;
-
-transition: width .55s ease;
-transition: width .55s ease;
-transition: width .55s ease;
-transition: width .55s ease;
-transition: width .55s ease;
-}
-.container-1 h1#search{
-box-shadow: 3px 3px 2px black;
-width: 12%;
-height: 50px;
-background: #2b303b;
-border: none;
-font-size: 10pt;
-float: left;
-color: #262626;
-padding-left: 10px;
-border-radius: 5px;
-border-radius: 5px;
-border-radius: 5px;
-color: #fff;
-
-transition: width .10s ease;
-transition: width .55s ease;
-transition: width .55s ease;
-transition: width .55s ease;
-transition: width .55s ease;
-}
-.container-1 h2#search{
-box-shadow: 3px 3px 2px black;
-width: 12%;
-height: 50px;
-background: #2b303b;
-border: none;
-font-size: 10pt;
-float: left;
-color: #262626;
-padding-left: 10px;
-border-radius: 5px;
-border-radius: 5px;
-border-radius: 5px;
-color: #fff;
-
-transition: width .10s ease;
-transition: width .55s ease;
-transition: width .55s ease;
-transition: width .55s ease;
-transition: width .55s ease;
+nav a{
+  text-decoration: none;
+  display: flex;
+  color: var(--main-text);
 }
 
-
-.container-1 .icon{
-position: absolute;
-top: 38%;
-left: 5%;
-z-index: 1;
-color: #4f5b66;
-}
-.container-1 .icon-1{
-position: absolute;
-top: 71%;
-height: 100px;
-left: 5%;
-z-index: 1;
-color: #4f5b66;
+.container-1{
+  position: relative;
+  width: 30%;
+  border-radius: 5px;
+  height: 50px;
+  background: #2b303b;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #fff;
+  margin-top: 1%;
+  box-shadow: 3px 3px 2px black;
+  margin-bottom: 1%;
 }
 
-.container-1 .icon-2{
-display: block;
-position: absolute;
-top: 104%;
-height: 100px;
-left: 5%;
-z-index: 1;
-color: #4f5b66;
+main h1{
+  color: var(--main-text);
+  text-align: center;
+}
+#idbook{
+  display: none;
+}
+.before{
+  color: #757575;
+}
+nav i{
+  color: var(--main-text);
+  font-size: 30px;
+  position: relative;
+  top:20%;
+  left:25%;
+}
+nav input{
+  width: 0;
+ 
+  background-color: var(--other-text);
+  color: var(--main-text);
+  height: 0;
+  border-radius: 5px;
+  position: relative;
+  top:5%;
+  left: 23%;
+  z-index: -1;
 }
 
-
-/* :focus типу пр  натиску що буде відбуватись */
-
-.container-1 input#search:focus, .container-2 input#search:active{
-/* outline це підсвічування границі кнопки й задаємо none без видимої границі */
-outline:none;
-width:70%;
-}
-
-.container-1 input#search:focus, .container-2 h1#search:active{
-/* outline це підсвічування границі кнопки й задаємо none без видимої границі */
-outline:none;
-width: 70%;
-}
-.container-1 input#search:focus, .container-2 h2#search:active{
-/* outline це підсвічування границі кнопки й задаємо none без видимої границі */
-outline:none;
-width: 70%;
-}
-
-/* :hover спрацьовує, коли користувач наводить елемент мишею, але не обов'язково активує його */
-.container-1:hover input#search{
-width: 70%;
-}
-.container-1:hover h1#search{
-width: 70%;
-}
-.container-1:hover h2#search{
+nav .container-1:first-child:hover > input{
+ z-index: 11;
   width: 70%;
-  }
-/* :hover спрацьовує, коли користувач наводить елемент мишею, але не обов'язково активує його */
+  height: 50%;
+  transition: 2s;
 
-
-.container-1:hover .icon{
-color: #93a2ad;
 }
-.container-1:hover .icon-1{
-color: #93a2ad;
-}
-.container-1:hover .icon-2{
-color: #93a2ad;
-}
-
+nav .container-1:first-child:hover{
+   margin-left: 55%;
+   width: 90%;
+   transition: 2s;
+ 
+ }
+ nav .container-1:first-child:hover > .icon{
+  margin-left: -18%;
+  transition: 2s;
+ }
+ .container-1:hover>i{
+  color: var(--color-accent);
+  transition: 1s;
+ }
 /* КІНЕЦЬ КІНЕЦЬ КІНЕЦЬ СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/ /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
 
 
@@ -453,3 +400,59 @@ animation-play-state: running;
 animation-fill-mode: forwards;
 }
 /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */  /* КІНЕЦЬ БАНЕРУ */
+
+footer{
+  position: relative;
+  top: 20%;
+}
+
+
+/* style for all books */
+
+.onebook{
+  display: flex;
+  background-color: var(--color-separator);
+  padding: 5%;
+  padding-right: 30%;
+  color: var(--main-light);
+  border-radius:20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  margin: 2%;
+}
+
+.onebook img{
+  width: 50%;
+}
+
+.infobook{
+  padding-left: 20%;
+}
+
+.pages{
+  display: flex;
+  position: relative;
+  width: fit-content;
+  left: 47%;
+  padding: 2%;
+  font-size: xx-large;
+  top: 50%;
+  background-color: var(--main-light);
+  height: 40px;
+  color: var(--main-text);
+}
+
+.before{
+  position: relative;
+  left: -20%;
+}
+.next{
+  position: relative;
+  right: -20%;
+}
+.page{
+  position: relative;
+  bottom: 35px;
+}
+#allbooks{
+  flex-direction: column;
+}
