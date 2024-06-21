@@ -493,7 +493,6 @@ animation-fill-mode: forwards;
 }
 
 footer{
-  position: absolute;
   bottom: 0;
   background: var(--footer-bg);
   padding-top: 1rem;  
@@ -537,7 +536,7 @@ footer{
 .footer-name{
   position: absolute;
   left: 10%;
-  top: 50px;
+  top: 80%;
 }
 .social-wraper{
   display: flex;
@@ -559,6 +558,7 @@ footer{
   position: relative;
   right: 200px;
   top: 20px;
+
 }
 
 .social-links svg:hover{
@@ -571,6 +571,11 @@ footer{
   gap: 0.75rem;
   list-style-type: none;
   padding-top: 45%;
+}
+
+.desc{
+  color: gray;
+  font-size: x-small;
 }
 
 .link-columns{
