@@ -1,9 +1,119 @@
 <html>
-    <head>
-       <link rel="stlesheet" href="../style/style.css">
-    </head>
-    <body>
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Loading..</title>
+    <link rel="icon" href="../src/Logo.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script type="x/handlebars" id="similbook">
+        {{#each this}}
+            <div class="book center">
+                    <div class="front">
+                        <img class="cover" src={{cover}} alt="">
+                    </div>
+                    <div class="back">
+                        <div class="back-content center">
+                            <h2 class="name">Назва книги: {{name}}</h2>
+                            <h2 class="author">Автор:{{author}}</h2>
+                            <span class="about">{{anthocium}}</span>
+                            <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
+                        </div>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <script type="x/handlebars" id="aboutbook">
+        <div class="div-img">
+            <div>
+                <div>
+                    <img id="book-cover" src="{{cover}}" alt="Обложка книги">
+                </div>
+                <div>
+                    <div class="dropdown">
+                        <select>
+                            <option value="0" disabled selected hidden>+ Додати до списку</option>
+                            <option value="1">Переглянуте</option>
+                            <option value="2">Відкладено</option>
+                            <option value="3">Запланований</option>
+                            <option value="4">Дивилюсь</option>
+                            <option value="5">Зберігти</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-book">
+            <h1 id="book-title"></h1>
+            <div class="rating">
+                <h1 id="filled-stars"></h1><h1 id="unfilled-stars"></h1>
+            </div>
+            <div>
+                <h2><b>Жанр:{{genre}}</b><span id="book-genre"></span></h2>
+                <h2><b>Автор(и):{{author}} </b><span id="book-authors"></span></h2>
+                <h2><b>Вікові обмеження:</b> <span class="color-years-black" id="book-age"></span></h2>
+                <h2><b>Мова книги:{{ln}} </b><span id="book-language"></span></h2>
+                <h2><b>Опублікована:{{data}} </b><span id="book-date"></span></h2>
+                <h2><b>Опис:{{anthocium}} </b><span id="book-description"></span></h2>
+            </div>
+            <button class = 'download'>download</button>
+            <button class = "read">read</button>
+        </div>
+    </script>
+    <body class="about-book-body">
+        <nav>
+            <div class="box">
+              <div class="container-1">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" placeholder="Пошук..." />
+              </div>
+        
+        
+              <div class="container-1">
+                <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw"
+                      aria-hidden="true"></i></span></a>
+              </div>
+        
+              <div class="container-1">
+                <span class="icon-2"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </nav>
+      <header>
+        <img id="icoon" src = "../src/logo.jpg">
+        <h1>Logika Library</h1>
+      </header>
+            <article id="bookk">
 
-        <script type="module" src="../index.js"></script>
+            </article>
+            <article>
+                <div class="similar-book">
+                    <h1 class="center">Схоже</h1>
+                    <div id="similar-book"></div>
+                </div>
+            </article>
+            <article>
+                <div class="books">
+                    
+                </div>
+            </article>
+            <div class="comment-section">
+                <h3>Коментар</h3>
+                <form class="comment-form">
+                    <div class="comment-editor">
+                        <span title="Жирный" onclick="wrapText('b')"><b>𝐁</b></span>
+                        <span title="Курсив" onclick="wrapText('k')"><i>I</i></span>
+                        <span title="Подчеркнутый" onclick="wrapText('u')"><u>U</u></span>
+                        <span title="Зачёркнутый" onclick="wrapText('s')"><s>S</s></span>
+                        <span title="Спойлер" onclick="wrapText('spoiler')">Spoiler</span>
+                    </div>
+                    <textarea id="comment-text" placeholder="Текст коментаря" required></textarea>
+                    <button type="submit">Відправити</button>
+                </form>
+            </div>
+        <!-- <footer>
+            Тут контакты или тип того
+        </footer> -->
+        <script type="module" src="../aboutbook.js"></script>
     </body>
+
 </html>
