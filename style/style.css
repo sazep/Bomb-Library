@@ -343,21 +343,29 @@ main h1 {
 
 
 /* ПОЧАТОК БАНЕР *//* ПОЧАТОК БАНЕР *//* ПОЧАТОК БАНЕР *//* ПОЧАТОК БАНЕР */
-.slides {
-  height: 200px;
-  width: 3%;
-  margin-left: 22%;
-
+.slider {
+  position: relative;
+  width: 50%;
+  height: 20%;
+  margin: 0 auto;
   overflow: hidden;
-  position: relative;
-  width: auto;
 }
 
-.slides ul {
-  list-style: none;
-  position: relative;
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 400%; /* 4 slides */
 }
 
+.slides img {
+  height: 40%;
+  cursor: pointer;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
 /* keyframes */
 @-webkit-keyframes anim_slides {
   0% {
@@ -453,60 +461,6 @@ main h1 {
 }
 
 /* keyframes */
-@-webkit-keyframes anim_titles {
-  0% {
-    left: 100%;
-    opacity: 0;
-  }
-
-  5% {
-    left: 10%;
-    opacity: 1;
-  }
-
-  20% {
-    left: 10%;
-    opacity: 1;
-  }
-
-  25% {
-    left: 100%;
-    opacity: 0;
-  }
-
-  100% {
-    left: 100%;
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes anim_titles {
-  0% {
-    left: 100%;
-    opacity: 0;
-  }
-
-  5% {
-    left: 10%;
-    opacity: 1;
-  }
-
-  20% {
-    left: 10%;
-    opacity: 1;
-  }
-
-  25% {
-    left: 100%;
-    opacity: 0;
-  }
-
-  100% {
-    left: 100%;
-    opacity: 0;
-  }
-}
-
 .slides ul li div {
   background-color: #6D5DE2;
   border-radius: 10px 10px 10px 10px;
