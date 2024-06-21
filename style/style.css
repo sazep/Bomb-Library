@@ -25,7 +25,16 @@
   --gray-icon: #A0A0A0;
   --footer-width: 64rem;
 }
-
+.neon {
+  color: #f5f5f5;
+  text-shadow:
+  0px -2px 4px #EDEAF9,
+  0px -2px 10px #f2bee3,
+  0px -10px 20px#ac7dd3,
+  0px -20px 40px #7285c9;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  font-size: 100px; 
+}
 body {
   position: relative;
   background-color: var(--main-dark);
