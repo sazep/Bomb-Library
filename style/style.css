@@ -11,9 +11,6 @@
   --other-text: #757575;
   /* колір роздільника */
   --color-separator: #BDBDBD;
-  --primary: #3ECF8E;
-  --primary-dark: #37996B;
-  --primary-darker: #317F5A;
   --headline-color: #F9F9F9;
   --text-color: #7E7E7E;
   --bg: #1C1C1C;
@@ -38,6 +35,7 @@ body {
   min-width: 18rem;
   margin: 0;
   padding: 0;
+  width: 100%;
 
 }
 
@@ -50,10 +48,17 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
+  left: 2%;
+  width: 98%;
 
 
 }
 
+main h1{
+  color: var(--main-text);
+  text-align: center;
+  text-decoration: none;
+ }
 header img {
   margin-right: 4%;
   width: 60px;
@@ -63,7 +68,9 @@ header img {
 }
 
 main {
-  height: 100%;
+  position: relative;
+  width: 75%;
+  left: 18%;
 }
 
 
@@ -115,15 +122,90 @@ nav input {
 #popular,
 #allbooks {
   position: relative;
-  width: 70%;
+  width: 100%;
   background-color: var(--main-dark);
   border-radius: 40px 0 40px 0;
   display: flex;
   justify-content: space-evenly;
-  left: 22%;
+ }
+
+#allbooks{
+  flex-direction: column;
+}
+
+/* ПОЧАТОК СТИЛІ ДЛЯ ALL-BOOKS */ /* ПОЧАТОК СТИЛІ ДЛЯ ALL-BOOKS */ /* ПОЧАТОК СТИЛІ ДЛЯ ALL-BOOKS */ /* ПОЧАТОК СТИЛІ ДЛЯ ALL-BOOKS */
+.onebook{
+  width: 70%;
+  text-decoration: none;
+  display: flex;
+  background-color: var(--color-separator);
+  padding: 2%;
+  margin-bottom: 1%;
+  color: var(--main-light);
+  border-radius:20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 
+.cat{
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 70%; 
+  white-space: nowrap; 
+}
+
+.infobook{
+ position: relative;
+ left: 2%;
+ width: 50%;
+ font-size: 1.2em;
+}
+
+
+.pages{
+  display: flex;
+  width: fit-content;
+  position: relative;
+  font-size: xx-large;
+  left:40%;
+  top: 50%;
+  padding: 3%;
+  height: 40px;
+  background-color: var(--main-light);
+}
+
+.before{
+  position: relative;
+  left:-20%;
+}
+.next{
+  position: relative;
+  right:-20%;
+}
+
+.page{
+  position: relative;
+  bottom: 35px;
+}
+#allbooks{
+  flex-direction: column;
+}
+.onebook img {
+  width: 40%;
+  height: 40%;
+  margin-left: 2%;;
+  box-shadow: 3px 3px 3px 0 var(--main-light);
+}
+#neon {
+  color: #f5f5f5;
+  text-shadow:
+  0px -2px 4px #EDEAF9,
+  0px -2px 10px #f2bee3,
+  0px -10px 20px#ac7dd3,
+  0px -20px 40px #7285c9;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  font-size: 100px; 
+}
 .book {
   position: relative;
   width: 250px;
@@ -172,171 +254,92 @@ nav input {
 }
 
 /* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
-/* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
-/* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
-/* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
-
-
-
-.box {
-  margin: 10% auto;
-  width: 140%;
-  height: 50px;
-  margin-top: 26%;
+nav,.box{
+  position: fixed;
+  width: 20%;
+  height: 200px;
+  top: 25%;
+  left: -5%;
+  font-size: large;
   display: flex;
   flex-direction: column;
+  align-items: center;
+ 
+  
 }
 
-.container-1 input#search {
-  width: 12%;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  color: #262626;
-  padding-left: 11%;
-  border-radius: 5px;
-  border-radius: 5px;
-  border-radius: 5px;
-  color: #fff;
-
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-}
-
-.container-1 h1#search {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  width: 12%;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  color: #262626;
-  padding-left: 10px;
-  border-radius: 5px;
-  border-radius: 5px;
-  border-radius: 5px;
-  color: #fff;
-
-  transition: width .10s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-}
-
-.container-1 h2#search {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  width: 12%;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  color: #262626;
-  padding-left: 10px;
-  border-radius: 5px;
-  border-radius: 5px;
-  border-radius: 5px;
-  color: #fff;
-
-  transition: width .10s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-  transition: width .55s ease;
-}
-
-main h1 {
+nav a{
+  text-decoration: none;
+  display: flex;
   color: var(--main-text);
-  text-align: center;
+}
+
+.container-1{
+  position: relative;
+  width: 30%;
+  border-radius: 5px;
+  height: 50px;
+  background: #2b303b;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #fff;
+  margin-top: 1%;
+  box-shadow: 3px 3px 2px black;
+  margin-bottom: 1%;
 }
 
 
-.container-1 .icon {
-  position: absolute;
-  top: 62%;
-  left: 5%;
-  z-index: 1;
-  color: #4f5b66;
+.before{
+  color: #757575;
+}
+nav i{
+  color: var(--main-text);
+  font-size: 30px;
+  position: relative;
+  top:20%;
+  left:25%;
+}
+.icon-1{
+  position: relative;
+  left: 20%;
+ 
+}
+nav input{
+  width: 0;
+ 
+  background-color: var(--other-text);
+  color: var(--main-text);
+  height: 0;
+  border-radius: 5px;
+  position: relative;
+  top:5%;
+  left: 23%;
+  z-index: -1;
 }
 
-.container-1 .icon-1 {
-  position: absolute;
-  top: 93%;
-  height: 100px;
-  left: 5%;
-  z-index: 1;
-  color: #4f5b66;
-}
-
-.container-1 .icon-2 {
-  display: block;
-  position: absolute;
-  top: 130%;
-  height: 100px;
-  left: 5%;
-  z-index: 1;
-  color: #4f5b66;
-}
-
-
-/* :focus типу пр  натиску що буде відбуватись */
-
-.container-1 input#search:focus,
-.container-2 input#search:active {
-  /* outline це підсвічування границі кнопки й задаємо none без видимої границі */
-  outline: none;
+nav .container-1:first-child:hover > input{
+ z-index: 11;
   width: 70%;
+  height: 50%;
+  transition: 2s;
+
 }
+nav .container-1:first-child:hover{
+   margin-left: 55%;
+   width: 90%;
+   transition: 2s;
+ 
+ }
+ nav .container-1:first-child:hover > .icon{
+  margin-left: -18%;
+  transition: 2s;
+ }
+ .container-1:hover>i{
+  color: var(--color-accent);
+  transition: 1s;
+ }
 
-.container-1 input#search:focus,
-.container-2 h1#search:active {
-  /* outline це підсвічування границі кнопки й задаємо none без видимої границі */
-  outline: none;
-  width: 70%;
-}
-
-.container-1 input#search:focus,
-.container-2 h2#search:active {
-  /* outline це підсвічування границі кнопки й задаємо none без видимої границі */
-  outline: none;
-  width: 70%;
-}
-
-/* :hover спрацьовує, коли користувач наводить елемент мишею, але не обов'язково активує його */
-.container-1:hover input#search {
-  width: 70%;
-}
-
-.container-1:hover h1#search {
-  width: 70%;
-}
-
-.container-1:hover h2#search {
-  width: 70%;
-}
-
-/* :hover спрацьовує, коли користувач наводить елемент мишею, але не обов'язково активує його */
-
-
-.container-1:hover .icon {
-  color: #93a2ad;
-}
-
-.container-1:hover .icon-1 {
-  color: #93a2ad;
-}
-
-.container-1:hover .icon-2 {
-  color: #93a2ad;
-}
 
 /* КІНЕЦЬ КІНЕЦЬ КІНЕЦЬ СТИЛІ ДЛЯ НАВІГАЦІЇ*/
 /* СТИЛІ ДЛЯ НАВІГАЦІЇ*//* СТИЛІ ДЛЯ НАВІГАЦІЇ*/
@@ -552,12 +555,14 @@ main h1 {
 }
 
 footer {
-  bottom: 0;
+  position: relative;
+
   background: var(--footer-bg);
   padding-top: 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
+ 
 }
 
 *::selection {
@@ -853,4 +858,8 @@ article {
 .comment-editor svg {
   width: 20px;
   height: 20px;
+}
+
+header,main,footer{
+  position: relative;
 }

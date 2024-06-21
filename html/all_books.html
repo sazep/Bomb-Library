@@ -7,6 +7,7 @@
   <link rel="icon" href="../src/Logo.jpg">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="https://kit.fontawesome.com/524028f0f4.js" crossorigin="anonymous"></script>
   <script type="x/handlebars" id="onebook">
       {{#each this}}
         <div class="onebook">
@@ -16,7 +17,7 @@
             <p><span>Автор:</span>{{author}}</p>
             <p><span>Мова:</span>{{ln}}</p>
             <p><span>Жанр:</span>{{genre}}</p>
-            <p><span>Опис:</span>{{anthocium}}</p>
+            <p class="cat"><span>Опис:</span>{{anthocium}}</p>
           </div>
         </div>
       {{/each}}
@@ -31,11 +32,11 @@
         <input type="search" id="search" placeholder="Пошук..." />
       </div>
 
-
       <div class="container-1">
-        <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw"
-              aria-hidden="true"></i></span></a>
-      </div>
+        <a class="list-group-item" href="../html/index.html"><span class="icon-1">
+            <i class="fa-solid fa-house-chimney"></i></span></a>
+        <h1 type="search" id="search" placeholder="Пошук..."> </h1>
+    </div>
 
       <div class="container-1">
         <span class="icon-2"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
