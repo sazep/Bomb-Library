@@ -20,7 +20,44 @@
                     </div>
             </div>
         </div>
-            {{/each}}
+        {{/each}}
+    </script> 
+    <script type="x/handlebars" id="aboutbook">
+        <div class="div-img">
+            <div>
+                <div>
+                    <img id="book-cover" src={{cover}} alt="Обложка книги">
+                </div>
+                <div>
+                    <div class="dropdown">
+                        <select>
+                            <option value="0" disabled selected hidden>+ Додати до списку</option>
+                            <option value="1">Переглянуте</option>
+                            <option value="2">Відкладено</option>
+                            <option value="3">Запланований</option>
+                            <option value="4">Дивилюсь</option>
+                            <option value="5">Зберігти</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-book">
+            <h1 id="book-title"></h1>
+            <div class="rating" style="color:gold">
+                <h1 id="filled-stars"></h1><h1 id="unfilled-stars"></h1>
+            </div>
+            <div>
+                <h2><b>Жанр: {{genre}}</b><span id="book-genre"></span></h2>
+                <h2><b>Автор(и): {{author}}</b><span id="book-authors"></span></h2>
+                <h2><b>Вікові обмеження: +6</b> <span class="color-years-black" id="book-age"></span></h2>
+                <h2><b>Мова книги: {{ln}}</b><span id="book-language"></span></h2>
+                <h2><b>Опублікована: {{data}}</b><span id="book-date"></span></h2>
+                <h2><b>Опис: {{anthocium}}</b><span id="book-description"></span></h2>
+            </div>
+            <button class="download">какая разница</button>
+            <button class="read">read</button>
+        </div>
     </script>
     <body class="about-book-body">
         <nav>
@@ -45,42 +82,7 @@
         <img id="icoon" src = "../src/logo.jpg">
         <h1>Logika Library</h1>
       </header>
-            <article>
-                <div class="div-img">
-                    <div>
-                        <div>
-                            <img id="book-cover" src="" alt="Обложка книги">
-                        </div>
-                        <div>
-                            <div class="dropdown">
-                                <select>
-                                    <option value="0" disabled selected hidden>+ Додати до списку</option>
-                                    <option value="1">Переглянуте</option>
-                                    <option value="2">Відкладено</option>
-                                    <option value="3">Запланований</option>
-                                    <option value="4">Дивилюсь</option>
-                                    <option value="5">Зберігти</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-book">
-                    <h1 id="book-title"></h1>
-                    <div class="rating">
-                        <h1 id="filled-stars"></h1><h1 id="unfilled-stars"></h1>
-                    </div>
-                    <div>
-                        <h2><b>Жанр: </b><span id="book-genre"></span></h2>
-                        <h2><b>Автор(и): </b><span id="book-authors"></span></h2>
-                        <h2><b>Вікові обмеження:</b> <span class="color-years-black" id="book-age"></span></h2>
-                        <h2><b>ID: </b><span id="book-id"></span></h2>
-                        <h2><b>Мова книги: </b><span id="book-language"></span></h2>
-                        <h2><b>Опублікована: </b><span id="book-date"></span></h2>
-                        <h2><b>Опис: </b><span id="book-description"></span></h2>
-                    </div>
-                </div>
-            </article>
+            <article id="bookk"></article>
             <article>
                 <div class="similar-book">
                     <h1 class="center">Схоже</h1>

@@ -11,6 +11,7 @@
   <script type="x/handlebars" id="onebook">
       {{#each this}}
         <div class="onebook">
+            <p class="id">{{id}}</p>
           <img src="{{cover}}" alt="">
           <div class="infobook">
             <p><span>Назва:</span>{{name}}</p>
@@ -54,7 +55,7 @@
     </section>
     <div class="pages">
       <i class="fa fa-arrow-left before" aria-hidden="true"></i>
-      <p class="page">2</p>
+      <p class="page">-1</p>
       <i class="fa fa-arrow-right next" aria-hidden="true"></i>
     </div>
 
