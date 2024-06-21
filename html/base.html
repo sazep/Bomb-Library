@@ -1,4 +1,4 @@
-<!-- <html>
+<html>
     <head>
     
         <link rel="stylesheet" href="../style/style.css">
@@ -7,29 +7,10 @@
         <link rel ="icon" href="../src/Logo.jpg">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-       <script type="x/handlebars" id="book">
-        {{#each this}}
-        
-        <div class="book center">
-            <p id="idbook">{{id}}</p>
-                <div class="front">
-                    <img class="cover" src="avatar.jpg" alt="">
-                </div>
-                <div class="back">
-                    <div class="back-content center">
-                        <h2 class="name">Назва книги: {{name}}</h2>
-                        <h2 class="author">Автор:{{author}}</h2>
-                        <span class="about">{{anthocium}}</span>
-                        <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
-                    </div>
-            </div>
-        </div>
-            {{/each}}
-       </script>
+       {{ > script}}
      </head>
      <body>
    
-         
          <header>
              <img id="icoon" src = "../src/logo.jpg">
              <h1>Logika Library</h1>
@@ -52,36 +33,20 @@
          </div>
  
          <nav>
- 
                  <div class="box">
                          <div class="container-1">
                              <span class="icon"><i class="fa fa-search"></i></span>
                              <input type="search" id="search" placeholder="Пошук..." />
                          </div>
-         
-               
-                         <div class="container-1">
-                            <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw" aria-hidden="true"></i></span></a>
-                         </div>
- 
+                        {{> div}}
                          <div class="container-1">
                                 <span class="icon-2"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
                          </div>
-     
                  </div>
- 
- 
          </nav>
    
         <main>
-            <h1>Новинки</h1>
-            <section id="new">
-                
-            </section>
-            <h1>Популярні</h1>
-            <section id="popular">
-             
-            </section>
+           {{> main }}
         </main>
         <footer>
             <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
@@ -105,53 +70,6 @@
             </li>
         </footer>
 
-        <script type="module" src="../index.js"></script>
+        {{ > linkscript }}
     </body>
-</html> -->
-
-
-{{#extend "base"}}
-    {{#partial "script"}}
-    <script type="x/handlebars" id="book">
-        {{#each this}}
-        
-        <div class="book center">
-            <p id="idbook">{{id}}</p>
-                <div class="front">
-                    <img class="cover" src="avatar.jpg" alt="">
-                </div>
-                <div class="back">
-                    <div class="back-content center">
-                        <h2 class="name">Назва книги: {{name}}</h2>
-                        <h2 class="author">Автор:{{author}}</h2>
-                        <span class="about">{{anthocium}}</span>
-                        <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
-                    </div>
-            </div>
-        </div>
-            {{/each}}
-       </script>
-    {{/script}}
-    
-    {{#partial "div"}}
-    <div class="container-1">
-        <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw" aria-hidden="true"></i></span></a>
-     </div>
-    {{/div}}
-
-    {{#partial "main"}}
-    <h1>Новинки</h1>
-    <section id="new">
-        
-    </section>
-    <h1>Популярні</h1>
-    <section id="popular">
-     
-    </section>
-    {{/main}}
-
-    {{#partial "linkscript"}}
-    <script type="module" src="../index.js"></script>
-    {{/linkscript}}
-    
-{{/extend}}
+</html>
