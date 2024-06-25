@@ -6,6 +6,18 @@ fetch("/data/new.json")
         $("#new").html(htTemp(data))
     })
 
+    .then((data)=>{
+        let books = document.querySelectorAll(".book")
+        for(let bb of books){
+            bb.addEventListener("click",function(){
+                let id = this.querySelector(".id").innerHTML
+                localStorage.setItem("id",id)
+                window.location.href = "../html/aboutbook.html"
+                
+            })
+        }
+    }) 
+
 fetch("/data/popular.json")
     .then((res)=>res.json())
     .then((data)=>{
@@ -13,3 +25,18 @@ fetch("/data/popular.json")
         const htTemp = Handlebars.compile(temp)
         $("#popular").html(htTemp(data))
     })
+
+    .then((data)=>{
+        let books = document.querySelectorAll(".book")
+        for(let bb of books){
+            bb.addEventListener("click",function(){
+                let id = this.querySelector(".id").innerHTML
+                localStorage.setItem("id",id)
+                window.location.href = "../html/aboutbook.html"
+                
+            })
+        }
+    }) 
+
+
+    
