@@ -886,3 +886,9 @@ header,main,footer{
   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
   font-size: 100px; 
 }
+
+.icon-plus{
+  position: absolute;
+  margin-left: 63%;
+  font-size: 35px;
+}
