@@ -570,8 +570,9 @@ footer {
 }
 
 .footer-name {
-  left: 10%;
-  top: 50px;
+  position: absolute;
+  left: 220px;
+  top: 30px;
 }
 
 .social-wraper {
@@ -588,13 +589,13 @@ footer {
 }
 
 .social-links svg {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   stroke: var(--text-color);
   transition: all 0.2s ease-in-out;
   position: relative;
-  right: 200px;
-  top: 20px;
+  right: 100px;
+  top: -10px;
 }
 
 .social-links svg:hover {
@@ -837,4 +838,19 @@ header,main,footer{
 
 .id{
   display: none;
+}
+
+
+.read{
+  display: flex;
+  position: relative;
+  left: 25%;
+  background-color: var(--color-separator);
+  width: 50%;
+  height: 50%;
+  border-radius: 20px;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  color: var(--bg);
 }
