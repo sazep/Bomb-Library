@@ -615,7 +615,6 @@ footer {
   flex-wrap: wrap;
   gap: 2rem;
   flex-grow: 1;
-  margin-top: -7%;
   margin-bottom: -7%;
 }
 
@@ -844,13 +843,17 @@ header,main,footer{
 .read{
   display: flex;
   position: relative;
-  left: 25%;
+  left: 12%;
   background-color: var(--color-separator);
-  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  width: fit-content;
+  border: 30px rgb(130, 130, 130) inset;
   height: 50%;
   border-radius: 20px;
   flex-direction: column;
   text-align: center;
   text-decoration: none;
-  color: var(--bg);
+  color: var(--footer-bg);
+  padding: 3% 3% 3% 3%;
+  margin-bottom: 1%;
 }
