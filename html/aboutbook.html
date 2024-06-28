@@ -22,6 +22,43 @@
         </div>
             {{/each}}
     </script>
+    <script type="x/handlebars" id="aboutbook">
+        <div class="div-img">
+            <div>
+                <div>
+                    <img id="book-cover" src={{cover}} alt="Обложка книги">
+                </div>
+                <div>
+                    <div class="dropdown">
+                        <select>
+                            <option value="0" disabled selected hidden>+ Додати до списку</option>
+                            <option value="1">Переглянуте</option>
+                            <option value="2">Відкладено</option>
+                            <option value="3">Запланований</option>
+                            <option value="4">Дивилюсь</option>
+                            <option value="5">Зберігти</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-book">
+            <h1 id="book-title">{{name}}</h1>
+            <div class="rating">
+                <h1 id="filled-stars"></h1><h1 id="unfilled-stars"></h1>
+            </div>
+            <div>
+                <h2><b>Жанр: </b><span id="book-genre">{{genre}}</span></h2>
+                <h2><b>Автор(и): </b><span id="book-authors">{{author}}</span></h2>
+                <h2><b>Вікові обмеження:</b> <span class="color-years-black" id="book-age"></span></h2>
+                <h2><b>Мова книги: </b><span id="book-language">{{ln}}</span></h2>
+                <h2><b>Опублікована: </b><span id="book-date">{{data}}</span></h2>
+                <h2><b>Опис: </b><span id="book-description">{{anthocium}}</span></h2>
+            </div>
+            <button class = "down">Завантажити</button>
+            <button class = "read">Читати</button>
+        </div>
+    </script>
     <body class="about-book-body">
         <nav>
             <div class="box">
@@ -45,41 +82,7 @@
         <img id="icoon" src = "../src/logo.jpg">
         <h1>Logika Library</h1>
       </header>
-            <article>
-                <div class="div-img">
-                    <div>
-                        <div>
-                            <img id="book-cover" src="" alt="Обложка книги">
-                        </div>
-                        <div>
-                            <div class="dropdown">
-                                <select>
-                                    <option value="0" disabled selected hidden>+ Додати до списку</option>
-                                    <option value="1">Переглянуте</option>
-                                    <option value="2">Відкладено</option>
-                                    <option value="3">Запланований</option>
-                                    <option value="4">Дивилюсь</option>
-                                    <option value="5">Зберігти</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-book">
-                    <h1 id="book-title"></h1>
-                    <div class="rating">
-                        <h1 id="filled-stars"></h1><h1 id="unfilled-stars"></h1>
-                    </div>
-                    <div>
-                        <h2><b>Жанр: </b><span id="book-genre"></span></h2>
-                        <h2><b>Автор(и): </b><span id="book-authors"></span></h2>
-                        <h2><b>Вікові обмеження:</b> <span class="color-years-black" id="book-age"></span></h2>
-                        <h2><b>ID: </b><span id="book-id"></span></h2>
-                        <h2><b>Мова книги: </b><span id="book-language"></span></h2>
-                        <h2><b>Опублікована: </b><span id="book-date"></span></h2>
-                        <h2><b>Опис: </b><span id="book-description"></span></h2>
-                    </div>
-                </div>
+            <article id="book">
             </article>
             <article>
                 <div class="similar-book">

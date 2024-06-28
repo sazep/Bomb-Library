@@ -189,11 +189,12 @@ nav input {
 .before{
   position: relative;
   left:-20%;
-  
+  z-index: -1;
 }
 .next{
   position: relative;
   right:-20%;
+
 }
 
 .page{
@@ -302,10 +303,6 @@ nav a{
   margin-bottom: 1%;
 }
 
-
-.before{
-  color: #757575;
-}
 nav i{
   color: var(--main-text);
   font-size: 30px;
@@ -834,4 +831,7 @@ article {
 
 header,main,footer{
   position: relative;
+}
+#id{
+  display: none;
 }
