@@ -1,85 +1,118 @@
-
 <html>
-
-<head>
-  <link rel="stylesheet" href="../style/style.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <title>Logika Library</title>
-  <link rel ="icon" href="../src/Logo.jpg">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-  <script type="x/handlebars" id="aboutbook">
-      <div class="onebook">
-        <img src="{{cover}}" alt="">
-        <div class="infobook">
-          <p><span>Назва:</span>{{name}}</p>
-          <p><span>Автор:</span>{{author}}</p>
-          <p><span>Мова:</span>{{ln}}</p>
-          <p><span>Жанр:</span>{{genre}}</p>
-          <p><span>Опис:</span>{{anthocium}}</p>
-          <button id='download'>download</button>
-          <button id='read'>read</button>
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Loading..</title>
+    <link rel="icon" href="../src/Logo.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script type="x/handlebars" id="similbook">
+        {{#each this}}
+        <div class="book center">
+                <div class="front">
+                    <img class="cover" src={{cover}} alt="">
+                </div>
+                <div class="back">
+                    <div class="back-content center">
+                        <h2 class="name">Назва книги: {{name}}</h2>
+                        <h2 class="author">Автор:{{author}}</h2>
+                        <span class="about">{{anthocium}}</span>
+                        <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
+                    </div>
+            </div>
         </div>
-      </div>
- </script>
-</head>
-
-<body>
-  <nav>
- 
-    <div class="box">
-            <div class="container-1">
+            {{/each}}
+    </script>
+    <script type="x/handlebars" id="aboutbook">
+        <div class="div-img">
+            <div>
+                <div>
+                    <img id="book-cover" src={{cover}} alt="Обложка книги">
+                </div>
+                <div>
+                    <div class="dropdown">
+                        <select>
+                            <option value="0" disabled selected hidden>+ Додати до списку</option>
+                            <option value="1">Переглянуте</option>
+                            <option value="2">Відкладено</option>
+                            <option value="3">Запланований</option>
+                            <option value="4">Дивилюсь</option>
+                            <option value="5">Зберігти</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-book">
+            <h1 id="book-title">{{name}}</h1>
+            <div class="rating">
+                <h1 id="filled-stars"></h1><h1 id="unfilled-stars"></h1>
+            </div>
+            <div>
+                <h2><b>Жанр: </b><span id="book-genre">{{genre}}</span></h2>
+                <h2><b>Автор(и): </b><span id="book-authors">{{author}}</span></h2>
+                <h2><b>Вікові обмеження:</b> <span class="color-years-black" id="book-age"></span></h2>
+                <h2><b>Мова книги: </b><span id="book-language">{{ln}}</span></h2>
+                <h2><b>Опублікована: </b><span id="book-date">{{data}}</span></h2>
+                <h2><b>Опис: </b><span id="book-description">{{anthocium}}</span></h2>
+            </div>
+            <button class = "down">Завантажити</button>
+            <button class = "read">Читати</button>
+        </div>
+    </script>
+    <body class="about-book-body">
+        <nav>
+            <div class="box">
+              <div class="container-1">
                 <span class="icon"><i class="fa fa-search"></i></span>
                 <input type="search" id="search" placeholder="Пошук..." />
+              </div>
+        
+        
+              <div class="container-1">
+                <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw"
+                      aria-hidden="true"></i></span></a>
+              </div>
+        
+              <div class="container-1">
+                <span class="icon-2"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
+              </div>
             </div>
-
-  
-            <div class="container-1">
-               <a class="list-group-item" href="../html/index.html"><span class="icon-1"><i class="fa-solid fa-house-chimney-window"></i></span></a>
+          </nav>
+      <header>
+        <img id="icoon" src = "../src/logo.jpg">
+        <h1>Logika Library</h1>
+      </header>
+            <article id="book">
+            </article>
+            <article>
+                <div class="similar-book">
+                    <h1 class="center">Схоже</h1>
+                    <div id="similar-book"></div>
+                </div>
+            </article>
+            <article>
+                <div class="books">
+                    
+                </div>
+            </article>
+            <div class="comment-section">
+                <h3>Коментар</h3>
+                <form class="comment-form">
+                    <div class="comment-editor">
+                        <span title="Жирный" onclick="wrapText('b')"><b>𝐁</b></span>
+                        <span title="Курсив" onclick="wrapText('k')"><i>I</i></span>
+                        <span title="Подчеркнутый" onclick="wrapText('u')"><u>U</u></span>
+                        <span title="Зачёркнутый" onclick="wrapText('s')"><s>S</s></span>
+                        <span title="Спойлер" onclick="wrapText('spoiler')">Spoiler</span>
+                    </div>
+                    <textarea id="comment-text" placeholder="Текст коментаря" required></textarea>
+                    <button type="submit">Відправити</button>
+                </form>
             </div>
-
-            <div class="container-1">
-                   <span class="icon-2"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
-            </div>
-
-    </div>
-
-
-</nav>
-<header>
-  <img id="icoon" src = "../src/logo.jpg">
-  <h1>Logika Library</h1>
-</header>
-<main>
-
-  <section id="book">
-
-</section>
-
-
-</main>
-<footer>
-  <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
-      <div class="filled"></div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="50"
-        height="50"
-        fill="currentColor"
-        class="bi bi-github"
-        viewBox="0 0 16 16"
-        xml:space="preserve"
-      >
-        <path
-          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-          fill="currentColor"
-        ></path>
-      </svg>
-    </a>
-    <div class="tooltip">GitHub</div>
-  </li>
-</footer>
-<script type="module" src="../aboutbook.js"></script>
-</body>
+        <!-- <footer>
+            Тут контакты или тип того
+        </footer> -->
+        <script type="module" src="../aboutbook.js"></script>
+    </body>
 
 </html>

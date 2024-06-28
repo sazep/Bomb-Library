@@ -1,37 +1,47 @@
+fetch("/data/new.json")
+    .then((res)=>res.json())
+    .then((data)=>{
+        const temp = $("#book").html()
+        const htTemp = Handlebars.compile(temp)
+        $("#new").html(htTemp(data))
+    })
 
+fetch("/data/popular.json")
+    .then((res)=>res.json())
+    .then((data)=>{
+        const temp = $("#book").html()
+        const htTemp = Handlebars.compile(temp)
+        $("#popular").html(htTemp(data))
+    })
 
+const slides = document.querySelector('.slides');
+const slideImages = document.querySelectorAll('.slide');
+let currentIndex = 0;
+const intervalTime = 5000
 
+function showSlide(index) {
+    if (index >= slideImages.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slideImages.length - 1;
+    } else {
+        currentIndex = index;
+    }
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
-        fetch("/data/new.json")
-            .then((res) => res.json())
-            .then((data) => {
-                const temp = $('#book').html();
-                const hb_temp = Handlebars.compile(temp);
-                $("#new").html(hb_temp(data));
-            })
-            .then((dt)=>{
-   
+slideImages.forEach(slide => {
+    slide.addEventListener('click', () => {
+        const link = slide.getAttribute('data-link');
+        window.location.href = link;
+    });
+});
 
-        fetch("/data/popular.json")
-            .then((res) => res.json())
-            .then((data) => {
-                const temp = $('#book').html();
-                const hb_temp = Handlebars.compile(temp);
-                $("#popular").html(hb_temp(data));
-            })
-   
-        })
-        .then((dt)=>{
+function startSlider() {
+    setInterval(() => {
+        showSlide(currentIndex + 1);
+    }, intervalTime);
+}
 
-
-        let books = document.querySelectorAll(".book")
-        for(let bb of books){
-            bb.addEventListener("click",function(){
-                let id = this.querySelector("p").innerHTML
-                localStorage.setItem("book",id)
-                window.location.href = "../html/aboutbook.html"
-              
-            })
-        }
-       } )
-
+showSlide(currentIndex);
+startSlider();

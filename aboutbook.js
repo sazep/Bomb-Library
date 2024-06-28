@@ -1,39 +1,46 @@
-
-let book = localStorage.getItem("book")
-fetch("/data/data.json")
-    .then((res) => res.json())
-    .then((data) => {
-        for(let bb of data){
-            if(bb["id"]== +book){
+fetch('/data/data.json')
+    .then(response => response.json())
+    .then(books => {
+        let book = localStorage.getItem("id")
+        for (let bb of books){
+            if (bb ["id"] == +book){
                 book = bb
                 break
             }
         }
+
         const temp = $('#aboutbook').html();
         const hb_temp = Handlebars.compile(temp);
-        $("#book").html(hb_temp(book))
-        localStorage.removeItem("book")
-}).then((dt)=>{
+        $("#book").html(hb_temp(book));
 
-    document.getElementById("download").addEventListener('click', () => {
-   
-    const file ="../book/" +book['file']
-    const element = document.createElement('a');
-      
-    element.setAttribute('href', 'data:text/plain;charset=utf-8');
-    element.setAttribute('download', file);
-   
-    element.style.display = 'none';
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-  })
+        const filledStars = '★'.repeat(book.mark)
+        const unfilledStars = '☆'.repeat(10 - book.mark)
+        document.getElementById('filled-stars').textContent = filledStars
+        document.getElementById('unfilled-stars').textContent = unfilledStars
+    })
+    .catch(error => console.error('Ошибка загрузки данных:', error))
 
-  document.getElementById("read").addEventListener('click', () => {
-   const b = "/book/"+book['file']
+fetch("/data/data.json")
+    .then((res)=>res.json())
+    .then((data)=>{
+        const temp = $("#book").html()
+        const htTemp = Handlebars.compile(temp)
+        $("#new").html(htTemp(data))
+    })
 
-    localStorage.setItem("filebook",b)
-    window.location.href = "read.html"
-    
-})
-})
+
+const count = 3
+let page = 0
+function load_books(){
+    fetch("/data/data.json")
+        .then((res) => res.json())
+        .then((data) => {
+            let s = page*count 
+            let n = s+3
+            data = data.slice(s,n)
+            const temp = $('#similbook').html();
+            const hb_temp = Handlebars.compile(temp);
+            $("#similar-book").html(hb_temp(data));
+        })
+}
+load_books()
