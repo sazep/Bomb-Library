@@ -1,18 +1,17 @@
 fetch('/data/data.json')
     .then(response => response.json())
     .then(books => {
-        const book = books[0]
+        let book = localStorage.getItem("id")
+        for (let bb of books){
+            if (bb ["id"] == +book){
+                book = bb
+                break
+            }
+        }
 
-        document.title = book.name
-        document.getElementById('book-title').textContent = book.name
-        document.getElementById('book-id').textContent = book.id
-        document.getElementById('book-genre').textContent = book.genre
-        document.getElementById('book-authors').textContent = book.author
-        document.getElementById('book-age').textContent = "6+"
-        document.getElementById('book-cover').src = book.cover
-        document.getElementById('book-language').textContent = book.ln
-        document.getElementById('book-date').textContent = book.data
-        document.getElementById('book-description').textContent = book.anthocium
+        const temp = $('#aboutbook').html();
+        const hb_temp = Handlebars.compile(temp);
+        $("#book").html(hb_temp(book));
 
         const filledStars = '★'.repeat(book.mark)
         const unfilledStars = '☆'.repeat(10 - book.mark)
