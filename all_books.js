@@ -1,19 +1,36 @@
-const count = 3 
+const count = 3
 let page = 0
-// s = page*count 
-// n = s + 3
-function loads_books(){
+function load_books(){
     fetch("/data/data.json")
-        .then((res)=>res.json())
-        .then((dta)=>{
-            let  s = page*count 
-            let  n = s + 3
-            dta = dta.slice(s,n)
-            console.log(dta)
-            const temp = $("#onebook").html()
-            const htTemp = Handlebars.compile(temp)
-            $("#allbooks").html(htTemp(dta))
-
+        .then((res) => res.json())
+        .then((data) => {
+            let s = page*count 
+            let n = s+3
+            data = data.slice(s,n)
+            const temp = $('#onebook').html();
+            const hb_temp = Handlebars.compile(temp);
+            $("#allbooks").html(hb_temp(data));
         })
 }
-loads_books()
+load_books()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

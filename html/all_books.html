@@ -2,84 +2,191 @@
 
 <head>
   <link rel="stylesheet" href="../style/style.css">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <title>Logika Library</title>
-        <link rel ="icon" href="../src/Logo.jpg">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-       <script type="x/handlebars"  id="onebook">
-      {{#each this}} 
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Logika Library</title>
+  <link rel="icon" href="../src/Logo.jpg">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="https://kit.fontawesome.com/524028f0f4.js" crossorigin="anonymous"></script>
+  <script type="x/handlebars" id="onebook">
+      {{#each this}}
         <div class="onebook">
-          <img src={{cover}} alt="">
+          <img src="{{cover}}" alt="">
           <div class="infobook">
             <p><span>Назва:</span>{{name}}</p>
             <p><span>Автор:</span>{{author}}</p>
-            <p><span>Мова:</span>{{ln}}</p>   
+            <p><span>Мова:</span>{{ln}}</p>
             <p><span>Жанр:</span>{{genre}}</p>
             <p class="cat"><span>Опис:</span>{{anthocium}}</p>
           </div>
         </div>
       {{/each}}
   </script>
-      </head>
+</head>
 
 <body>
-  <header>
-    <img src = "../src/logo.jpg">
-    <h1>Logika Library</h1>
-  </header>
   <nav>
- 
     <div class="box">
-            <div class="container-1">
-                <span class="icon"><i class="fa fa-search"></i></span>
-                <input type="search" id="search" placeholder="Пошук..." />
-            </div>
+      <div class="container-1">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <input type="search" id="search" placeholder="Пошук..." />
+      </div>
 
-  
-            <div class="container-1">
-                <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw" aria-hidden="true"></i></span></a>
-                
-            </div>
-
-            <div class="container-1">
-                <span class="icon-2"><a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;</i></span>
-            </div>
-
+      <div class="container-1">
+        <a class="list-group-item" href="../html/index.html"><span class="icon-1">
+            <i class="fa-solid fa-house-chimney"></i></span></a>
+        <h1 type="search" id="search" placeholder="Пошук..."> </h1>
     </div>
 
+      <div class="container-1">
+        <span class="icon-2"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <img id="icoon" src="../src/logo.jpg">
+    <h1>Logika Library</h1>
+  </header>
+  <main>
 
-</nav>
-<main>
-  <section id="allbooks">
-    
-  </section>
-  <div class="pages">
-    <i class="fa fa-arrow-left before" aria-hidden="true"></i>
-    <p class="page">2</p>
-    <i class="fa fa-arrow-right next" aria-hidden="true"></i>
-  </div>
-</main>
+    <section id="allbooks">
+
+    </section>
+    <div class="pages">
+      <i class="fa fa-arrow-left before" aria-hidden="true"></i>
+      <p class="page">2</p>
+      <i class="fa fa-arrow-right next" aria-hidden="true"></i>
+    </div>
+
+  </main>
   <footer>
-    <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
-        <div class="filled"></div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          fill="currentColor"
-          class="bi bi-github"
-          viewBox="0 0 16 16"
-          xml:space="preserve"
-        >
-          <path
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-            fill="currentColor"
-          ></path>
-        </svg>
-      </a>
+    <div class="footr-wraper">
+        <div class="footer-columns">
+            <div class="footer-logo-column"></div>
+            <a href="/" aria-label="Go to LOOgiK Homepage" title ="Go to LOOgiK Homepage">
+                <img src="../src/Logo.jpg" loading="lazy" alt="LOOgiK logo" class="footer-logo">
+            </a>
+            <h2 class="footer-name">Logika Library</h2>
+            <div class="social-wraper">
+                <div class="social-links">
+                
+                            <a href="#" title="GitHub">
+                                <svg style="color: azure;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="link-columns">
+                <div>
+                    <section>
+                        <h3>Склад команди</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Саша">Саша</a> <span class="desc">(Гол. проекту)</span>
+                            </li>
+                            <li>
+                                <a href="#" title="Єгор">Єгор</a> <span class="desc">(Зам)</span>
+                            </li>
+                            <li>
+                                <a href="#" title="Тарас">Тарас</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Олексій">Олексій</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Максим">Максим</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Маша">Маша</a> <span class="desc">(Босс)</span>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Пошти розробників</h3>
+                        <ul>
+                            <li>
+                                <a href="malito:sazep7w@gmail.com" title="Пошта Саші">sazep7w@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="malito:egorshevcuk6a@gmail.com" title="Пошта Єгора">egorshevcuk6a@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="malito:csgosized@gmail.com" title="Пошта Тараса">csgosized@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="malito:oleksijbaranovskij@gmail.com" title="Пошта Олексія">oleksijbaranovskij@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="malito:prigockijmaks@gmail.com" title="Пошта Максима">prigockijmaks@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="malito:varvarich65@gmail.com" title="Пошта Маші">varvarich65@gmail.com</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Телефони розробників</h3>
+                        <ul>
+                            <li>
+                                <a href="tel:+421 950 458 546" title="Телфеон Саші">+421 950 458 546</a>
+                            </li>
+                            <li>
+                                <a href="tel:+380 95 347 78 22" title="Телфеон Єгора">+380 95 347 78 22</a>
+                            </li>
+                            <li>
+                                <a href="tel:+380 98 007 60 56" title="Телфеон Тараса">+380 98 007 60 56</a>
+                            </li>
+                            <li>
+                                <a href="tel:+380 98 109 50 28" title="Телфеон Олексія">+380 98 109 50 28</a>
+                            </li>
+                            <li>
+                                <a href="tel:+380 98 012 37 15" title="Телфеон Максима">+380 98 012 37 15</a>
+                            </li>
+                            <li>
+                                <a href="tel:+380 98 028 98 26" title="Телфеон Маші">+380 98 028 98 26</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Додаткове</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Пропозиції">Пропозиції</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Скарги">Скарги</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Оцінка">Оцінка</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Features">Ми</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Features">Найкращі</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Features">Розробники</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-wraper">
+            <small>©<span id="year"></span> LOOgiK Inc.</small>
+        </div>
+    </div>
+
 </footer>
-<script type="module" src="../all_books.js"></script>
+<script>
+    document.getElementById('year').innerHTML = new Date().getFullYear()
+</script>
+  <script type="module" src="../all_books.js"></script>
 </body>
 
 </html>
