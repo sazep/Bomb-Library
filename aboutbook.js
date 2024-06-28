@@ -1,17 +1,17 @@
 fetch('/data/data.json')
     .then(response => response.json())
     .then(books => {
-        let book = localStorage.getItem("id") 
+        let book = localStorage.getItem("id")
         for (let bb of books){
-            if (bb["id"]==+book){
+            if (bb ["id"] == +book){
                 book = bb
                 break
             }
         }
 
-        const temp = $("#aboutbook").html()
-        const htTemp = Handlebars.compile(temp)
-        $("#bookk").html(htTemp(book))
+        const temp = $('#aboutbook').html();
+        const hb_temp = Handlebars.compile(temp);
+        $("#book").html(hb_temp(book));
 
         const filledStars = '★'.repeat(book.mark)
         const unfilledStars = '☆'.repeat(10 - book.mark)
