@@ -1,82 +1,107 @@
 <html>
     <head>
     
-       <link rel="stylesheet" href="../style/style.css">
-       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-       <title>Logika Library</title>
-       <link rel ="icon" href="">
-    </head>
-    <body>
-        
-        <header>
-            <img src = "../src/logo.jpg">
-            <h1>Logika Library</h1>
-        </header>
-        <div class="slides">
-            <ul>
-                <li><img src="images/img1.jpg" title="зображення 1" alt="" />
-                    <div>Текст для банера 1</div>
-                </li>
-                <li><img src="images/img2.jpg" title="зображення 2" alt="" />
-                    <div>Текст для банера 2</div>
-                </li>
-                <li><img src="images/img3.jpg" title="зображення 3" alt="" />
-                    <div>Текст для банера 3</div>
-                </li>
-                <li><img src="images/img4.jpg" title="зображення 4" alt="" />
-                    <div>Текст для банера 4</div>
-
-            </ul>
-        </div>
-
-        <nav>
-            
-            <a href="all_books.html">Бібліотека</a>
-            <a href=""></a>
-            <a href=""></a>
-
-                <div class="box">
-                        <div class="container-1">
-                            <span class="icon"><i class="fa fa-search"></i></span>
-                            <input type="search" id="search" placeholder="Пошук..." />
-                        </div>
-        
-              
-                        <div class="container-1">
-                            <span class="icon-1"><a class="list-group-item" href="#"></a><i class="fa fa-book fa-fw" aria-hidden="true"></i></span>
-                            <h1 type="search" id="search" placeholder="Пошук..."> </h1>
-                        </div>
-
-                        <div class="container-1">
-                            <span class="icon-2"><a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;</i></span>
-                            <h2 type="search" id="search" placeholder="Пошук..."> </h2>
-                        </div>
-    
+        <link rel="stylesheet" href="../style/style.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <title>Logika Library</title>
+        <link rel ="icon" href="../src/Logo.jpg">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+       <script type="x/handlebars" id="book">
+        {{#each this}}
+        <div class="book center">
+                <div class="front">
+                    <img class="cover" src={{cover}} alt="">
                 </div>
-
-
-        </nav>
-
-        <main>
-            <section class="greetings">"Впав вставай-Встав стій"</section>
-            <section id="new">
-                <div class="book">
-                    <img src="../src/Death Note.jpg" alt="">
-                    <div class="text">
-                        <h3 class="name">Назва книги</h3>
-                        <h3 class="author">Автор</h3>
-                         <!--<h3 class="ln">Рік</h3>
-                        <h3 class="genre">Жанр</h3>
-                        <p class="anthocium">anthocium</p> -->
-                        
+                <div class="back">
+                    <div class="back-content center">
+                        <h2 class="name">Назва книги: {{name}}</h2>
+                        <h2 class="author">Автор:{{author}}</h2>
+                        <span class="about">{{anthocium}}</span>
+                        <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
                     </div>
-
-                </div>
+            </div>
+        </div>
+            {{/each}}
+       </script>
+     </head>
+     <body>
+         
+         <header>
+             <img src = "../src/logo.jpg">
+             <h1>Logika Library</h1>
+         </header>
+         <div class="slides">
+             <ul>
+                 <li><img src="images/img1.jpg" title="зображення 1" alt="" />
+                     <div>Текст для банера 1</div>
+                 </li>
+                 <li><img src="images/img2.jpg" title="зображення 2" alt="" />
+                     <div>Текст для банера 2</div>
+                 </li>
+                 <li><img src="images/img3.jpg" title="зображення 3" alt="" />
+                     <div>Текст для банера 3</div>
+                 </li>
+                 <li><img src="images/img4.jpg" title="зображення 4" alt="" />
+                     <div>Текст для банера 4</div>
+ 
+             </ul>
+         </div>
+ 
+         <nav>
+ 
+                 <div class="box">
+                         <div class="container-1">
+                             <span class="icon"><i class="fa fa-search"></i></span>
+                             <input type="search" id="search" placeholder="Пошук..." />
+                         </div>
+         
+               
+                         <div class="container-1">
+                             <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw" aria-hidden="true"></i></span></a>
+                             
+                         </div>
+ 
+                         <div class="container-1">
+                             <span class="icon-2"><a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;</i></span>
+                         </div>
+     
+                 </div>
+ 
+ 
+         </nav>
+   
+        <main>
+            <h1 id="neon">Новинки</h1>
+            <section id="new">
+                
+             
+             
             </section>
-            <section id="new"></section>
+            <h1 id="neon">Популярні</h1>
+            <section id="popular"></section>
+        
         </main>
+        <footer>
+            <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
+                <div class="filled"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill="currentColor"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                  xml:space="preserve"
+                >
+                  <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+      </footer>
 
-        <footer></footer>
-        <script type="module" src="../index.js"></script>
-    </body>
+      <script type="module" src="../index.js"></script>
+  </body>
 </html>
