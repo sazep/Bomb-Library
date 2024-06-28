@@ -6,7 +6,12 @@
         <link rel ="icon" href="../src/Logo.jpg">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-    </head>
+
+    <script type="X/handlebars" id = "textbook">
+        <p class="textRead" id="textRead">{{this}}</p>
+    </script>
+    
+</head>
     <body>
         <header>
             <img src = "../src/logo.jpg">
@@ -30,9 +35,7 @@
             </div>
         </nav>
         <main>
-            <div class="read">
-                <h1>efefef</h1>
-                <p class="textRead" id="textRead">.dmbnzfbkjfgzjkfgzhkgfzdhkfgzhgfhzdfgdzhgfzhgfzhgfhhjvhdzvhchjzvxhbnfvgzxgfhzxgfnzmgfzhjgfhjzgfhjzgzyeuyzegfyz</p>
+            <div class="read" id="read">        
             </div>
             <div class="pages">
                 <i class="fa fa-arrow-left before" aria-hidden="true"></i>
@@ -166,6 +169,6 @@
             document.getElementById('year').innerHTML = new Date().getFullYear()
         </script>
         <script type="module" src="../read.js"></script>
-        <script type="module" src="../all_books.js"></script>
+ч
     </body>
 </html>

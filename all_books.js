@@ -48,24 +48,3 @@ before.addEventListener("click", ()=>{
         before.style.zIndex = -1
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
