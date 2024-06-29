@@ -1,4 +1,5 @@
 let file = localStorage.getItem("filebook")
+file = "../book/" + file
 const count = 5000
 let page = 0
 let allbooks

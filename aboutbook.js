@@ -34,10 +34,10 @@ function load_books(){
         })
         .then((abc)=>{
             document.querySelector('.downbook').addEventListener("click",()=>{
-                const file = book["file"]
+                const file = '../book/'+book["file"]
                 const down = document.createElement("a")
-                down.setAttribute("download", file)
-                down.setAttribute("href", `data:text/plain;charset=utf-8,${encodeURIComponent(file)}`)
+                down.setAttribute('href', file)
+                down.setAttribute('download', book['file'])
                 down.style.display = "none"
                 document.body.appendChild(down)
                 down.click()

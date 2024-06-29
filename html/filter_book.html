@@ -11,6 +11,7 @@
   <script type="x/handlebars" id="onebook">
       {{#each this}}
         <div class="onebook">
+            <span class="icon-plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
           <p class = "id" id = "id">{{id}}</p>
           <img src="{{cover}}" alt="">
           <div class="infobook">
@@ -26,24 +27,30 @@
 </head>
 
 <body>
-  <nav>
-    <div class="box">
-      <div class="container-1">
-        <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="search" id="search" placeholder="Пошук..." />
-      </div>
+    <nav>
+        <div class="box">
+          <div class="container-1">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input type="search" id="search" placeholder="Пошук..." />
+          </div>
+    
+    
+          <div class="container-1">
+            <a class="list-group-item" href="../html/all_books.html"><span class="icon-1"><i class="fa fa-book fa-fw"
+                  aria-hidden="true"></i></span></a>
+          </div>
 
-      <div class="container-1">
-        <a class="list-group-item" href="../html/index.html"><span class="icon-1">
-            <i class="fa-solid fa-house-chimney"></i></span></a>
-        <h1 type="search" id="search" placeholder="Пошук..."> </h1>
-    </div>
-
-    <div class="container-1">
-        <span class="icon-2"><a class="list-group-item" href="#"><i class='fas fa-bookmark' style='font-size:34px;margin-left: 9%;margin-top: 6%;'></i></span>
-    </div>
-    </div>
-  </nav>
+          <div class="container-1">
+            <a class="list-group-item" href="../html/index.html"><span class="icon-1">
+                <i class="fa-solid fa-house-chimney"></i></span></a>
+            <h1 type="search" id="search" placeholder="Пошук..."> </h1>
+        </div>
+    
+          <div class="container-1">
+            <span class="icon-2"><i class='fas fa-bookmark' style='font-size:34px;margin-left: 9%;margin-top: 6%;'></i></span>
+          </div>
+        </div>
+      </nav>
   <header>
     <img id="icoon" src="../src/logo.jpg">
     <h1>Logika Library</h1>
@@ -53,10 +60,10 @@
     <section id="allbooks">
 
     </section>
-    <div class="pages">
-      <i class="fa fa-arrow-left before" aria-hidden="true"></i>
-      <p class="page">-1</p>
-      <i class="fa fa-arrow-right next" aria-hidden="true"></i>
+    <div class="pages1">
+      <i class="fa fa-arrow-left before1" aria-hidden="true"></i>
+      <p class="page1">-1</p>
+      <i class="fa fa-arrow-right next1" aria-hidden="true"></i>
     </div>
 
   </main>
@@ -185,6 +192,7 @@
     document.getElementById('year').innerHTML = new Date().getFullYear()
 </script>
   <script type="module" src="../search.js"></script>
+  <script type="module" src="../filterbook.js"></script>
 </body>
 
 </html>

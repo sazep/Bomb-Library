@@ -1,15 +1,18 @@
 <html>
     <head>
     
-        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="style/style.css">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <title>Logika Library</title>
-        <link rel ="icon" href="../src/Logo.jpg">
+        <link rel ="icon" href="src/Logo.jpg">
+        <script src="https://kit.fontawesome.com/524028f0f4.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script type="x/handlebars" id="book">
         {{#each this}}
         <div class="book center">
+            
+            <p class="id" id="id">{{id}}</p>
                 <div class="front">
                     <img class="cover" src={{cover}} alt="">
                 </div>
@@ -27,22 +30,22 @@
     </head>
     <body> 
         <header>
-            <img src = "../src/logo.jpg">
+            <img src = "src/logo.jpg">
             <h1>Logika Library</h1>
         </header>
         <div class="slider">
-            <div class="slides">
-                <div class="slide" data-link="https://gooogasol.github.io/Resume/">
-                    <img src="../src/baner_egor.png" alt="Banner 1">
+            <div class="slides ">
+                <div class="slide one" data-link="https://gooogasol.github.io/Resume/">
+                    <img src="src/baner_egor.png" alt="Banner 1">
                 </div>
-                <div class="slide" data-link="https://dranikii.github.io/Home/">
-                    <img src="../src/baner_lesha.png" alt="Banner 2">
+                <div class="slide two" data-link="https://dranikii.github.io/Home/">
+                    <img src="src/baner_lesha.png" alt="Banner 2">
                 </div>
-                <div class="slide" data-link="https://sazep.github.io/aboba/">
-                    <img src="../src/baner_sz.png" alt="Banner 3">
+                <div class="slide three" data-link="https://sazep.github.io/aboba/">
+                    <img src="src/baner_sz.png" alt="Banner 3">
                 </div>
-                <div class="slide" data-link="https://sazep.github.io/aboba/">
-                    <img src="../src/4.jpg" alt="Banner 4">
+                <div class="slide four" data-link="https://sazep.github.io/aboba/">
+                    <img src="src/4.jpg" alt="Banner 4">
                 </div>
             </div>
         </div>
@@ -51,15 +54,15 @@
             <div class="box">
                 <div class="container-1">
                     <span class="icon"><i class="fa fa-search"></i></span>
-                    <input type="search" id="search" placeholder="Пошук..." />
+                    <input type="search"  id="search" placeholder="Пошук..." />
                 </div>
                 <div class="container-1">
-                   <a class="list-group-item" href="../html/all_books.html"> <span class="icon-1">
+                   <a class="list-group-item" href="html/all_books.html"> <span class="icon-1">
                     <i class="fa fa-book fa-fw" aria-hidden="true"></i></span></a>
             
                 </div>
                 <div class="container-1">
-                    <span class="icon-2"><a class="list-group-item" href="#"><i class='fas fa-bookmark' style='font-size:34px;margin-left: 9%;margin-top: 6%;'></i></span>
+                    <span class="icon-2"><a class="list-group-item" href="#"></a><i class='fas fa-bookmark' style='font-size:34px;margin-left: 9%;margin-top: 6%;'></i></span>
                 </div>
             </div>
         </nav>
@@ -78,7 +81,7 @@
                     <div class="footer-logo-column">
                   
                     <a href="/" aria-label="Go to LOOgiK Homepage" title ="Go to LOOgiK Homepage">
-                        <img src="../src/Logo.jpg" loading="lazy" alt="LOOgiK logo" class="footer-logo">
+                        <img src="src/Logo.jpg" loading="lazy" alt="LOOgiK logo" class="footer-logo">
                     </a>
                     <h2 class="footer-name">Logika Library</h2>                        
                      <a href="https://github.com/sazep/Loogik-Library" title="GitHub">
@@ -196,7 +199,7 @@
         <script>
             document.getElementById('year').innerHTML = new Date().getFullYear()
         </script>
-        <script type="module" src="../index.js"></script>
-        <script type="module" src="../search.js"></script>
+        <script type="module" src="index.js"></script>
+        <script type="module" src="search.js"></script>
     </body>
 </html>

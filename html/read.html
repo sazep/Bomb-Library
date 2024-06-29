@@ -4,6 +4,7 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <title>Logika Library</title>
         <link rel ="icon" href="../src/Logo.jpg">
+        <script src="https://kit.fontawesome.com/524028f0f4.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 
@@ -29,9 +30,16 @@
             
                 </div>
                 <div class="container-1">
-                    <span class="icon-2"><a class="list-group-item1" href="#"></a><i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;</i></span>
-                    <h2 type="search" id="search" placeholder="Пошук..."> </h2>
+                    <a class="list-group-item" href="../html/index.html"><span class="icon-1">
+                        <i class="fa-solid fa-house-chimney"></i></span></a>
+                    <h1 type="search" id="search" placeholder="Пошук..."> </h1>
                 </div>
+
+                <div class="container-1">
+                    <span class="icon-2"><a class="list-group-item" href="#"></a><i class='fas fa-bookmark' style='font-size:34px;margin-left: 9%;margin-top: 6%;'></i></span>
+                </div>
+
+
             </div>
         </nav>
         <main>
@@ -169,6 +177,7 @@
             document.getElementById('year').innerHTML = new Date().getFullYear()
         </script>
         <script type="module" src="../read.js"></script>
+        <script type="module" src="../search.js"></script>
 ч
     </body>
 </html>

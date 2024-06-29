@@ -12,7 +12,7 @@ fetch("/data/new.json")
             bb.addEventListener("click",function(){
                 let id = this.querySelector(".id").innerHTML
                 localStorage.setItem("id",id)
-                window.location.href = "../html/aboutbook.html"
+                window.location.href = "html/aboutbook.html"
                 
             })
         }
@@ -32,7 +32,7 @@ fetch("/data/popular.json")
             bb.addEventListener("click",function(){
                 let id = this.querySelector(".id").innerHTML
                 localStorage.setItem("id",id)
-                window.location.href = "../html/aboutbook.html"
+                window.location.href = "html/aboutbook.html"
                 
             })
         }
