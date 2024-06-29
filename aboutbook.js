@@ -46,7 +46,7 @@ function load_books(){
             document.querySelector('.readbook').addEventListener("click",()=>{
                 localStorage.setItem("filebook", book['file'])
                 window.location.href = "read.html"
-            })
+            }) 
         })
     }
 load_books()

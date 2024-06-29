@@ -24,28 +24,31 @@ let before = document.querySelector(".before")
 let next = document.querySelector(".next")
 
 function goToNextPage() {
-    if (page * count < allbooks) {
-        page = page + 1
-        load_text()
-        before.style.zIndex = 0
+    if (next.style.zIndex == 0) {
+        if (page * count < allbooks) {
+            page = page + 1
+            load_text()
+            before.style.zIndex = 0
+        }
     }
-    if ((page + 1) * count > allbooks) {
+    if ((page + 1) * count >= allbooks) {
         next.style.zIndex = -1
     }
 }
 
 function goToPreviousPage() {
-    if (page > 0) {
-        page = page - 1
-        load_text()
-        next.style.zIndex = 0
+    if (before.style.zIndex == 0) {
+        if (page > 0) {
+            page = page - 1
+            load_text()
+            next.style.zIndex = 0
+        }
     }
     if (page == 0) {
         before.style.zIndex = -1
     }
 }
-
-// добавил перемещение с помощу стрелочек и букв чтоб не наводится
+// добавил перемещение с помощу стрелочек и букв чтоб не наводитсяs
 next.addEventListener("click", goToNextPage)
 before.addEventListener("click", goToPreviousPage)
 
