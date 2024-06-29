@@ -31,17 +31,18 @@ function load_books(){
 }
 load_books()
 
-next.addEventListener("click", () => {
-    if (page * count < all_books) {
+function goToNextPage() {
+    if (page * count < allbooks) {
         page = page + 1
         load_books()
         before.style.zIndex = 0
     }
-    if ((page + 1) * count > all_books) {
+    if ((page + 1) * count > allbooks) {
         next.style.zIndex = -1
     }
-})
-before.addEventListener("click", () => {
+}
+
+function goToPreviousPage() {
     if (page > 0) {
         page = page - 1
         load_books()
@@ -49,5 +50,18 @@ before.addEventListener("click", () => {
     }
     if (page == 0) {
         before.style.zIndex = -1
+    }
+}
+
+// добавил перемещение с помощу стрелочек и букв чтоб не наводится
+next.addEventListener("click", goToNextPage)
+before.addEventListener("click", goToPreviousPage)
+
+document.addEventListener("keydown", (event) => {
+    if (event.code == "ArrowRight" || event.code == "KeyD") {
+        goToNextPage()
+    }
+    if (event.code == "ArrowLeft" || event.code == "KeyA") {
+        goToPreviousPage()
     }
 })

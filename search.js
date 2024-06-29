@@ -5,7 +5,7 @@ let filter_book
 $("#search").on("keyup", function(event){
     if (event.key === "Enter" || event.keyCode===13) {
         let txt =  input.value
-        fetch("data/data.json")
+        fetch("../data/data.json")
             .then((res) => res.json())
             .then((data) => {
                 filter_book = []
