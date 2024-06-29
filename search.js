@@ -15,7 +15,7 @@ $("#search").on("keyup", function (event) {
                     }
                 }
                 localStorage.setItem("filterbook", JSON.stringify(filter_book))
-                window.location.href = "../html/filter_book.html"
+                window.location.href = "/html/filter_book.html"
             })
     }
 })
