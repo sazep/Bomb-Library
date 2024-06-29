@@ -7,59 +7,59 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 <script type="x/handlebars" id="similbook">
-        {{#each this}}
-        <div class="book center">
-                <div class="front">
-                    <img class="cover" src={{cover}} alt="">
-                </div>
-                <div class="back">
-                    <div class="back-content center">
-                        <h2 class="name">Назва книги: {{name}}</h2>
-                        <h2 class="author">Автор:{{author}}</h2>
-                        <span class="about">{{anthocium}}</span>
-                        <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
+            {{#each this}}
+            <div class="book center">
+                    <div class="front">
+                        <img class="cover" src={{cover}} alt="">
                     </div>
+                    <div class="back">
+                        <div class="back-content center">
+                            <h2 class="name">Назва книги: {{name}}</h2>
+                            <h2 class="author">Автор:{{author}}</h2>
+                            <span class="about">{{anthocium}}</span>
+                            <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
+                        </div>
+                </div>
             </div>
-        </div>
-            {{/each}}
-    </script>
+                {{/each}}
+        </script>
 <script type="x/handlebars" id="aboutbook">
-        <div class="div-img">
-            <div>
+            <div class="div-img">
                 <div>
-                    <img id="book-cover" src={{cover}} alt="Обложка книги">
-                </div>
-                <div>
-                    <div class="dropdown">
-                        <select>
-                            <option value="0" disabled selected hidden>+ Додати до списку</option>
-                            <option value="1">Переглянуте</option>
-                            <option value="2">Відкладено</option>
-                            <option value="3">Запланований</option>
-                            <option value="4">Дивилюсь</option>
-                            <option value="5">Зберігти</option>
-                        </select>
+                    <div>
+                        <img id="book-cover" src={{cover}} alt="Обложка книги">
+                    </div>
+                    <div>
+                        <div class="dropdown">
+                            <select>
+                                <option value="0" disabled selected hidden>+ Додати до списку</option>
+                                <option value="1">Переглянуте</option>
+                                <option value="2">Відкладено</option>
+                                <option value="3">Запланований</option>
+                                <option value="4">Дивилюсь</option>
+                                <option value="5">Зберігти</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="about-book">
-            <h1 id="book-title">{{name}}</h1>
-            <div class="rating">
-                <h1 id="filled-stars"></h1><h1 id="unfilled-stars"></h1>
+            <div class="about-book">
+                <h1 id="book-title">{{name}}</h1>
+                <div class="rating">
+                    <h1 id="filled-stars"></h1><h1 id="unfilled-stars"></h1>
+                </div>
+                <div>
+                    <h2><b>Жанр: </b><span id="book-genre">{{genre}}</span></h2>
+                    <h2><b>Автор(и): </b><span id="book-authors">{{author}}</span></h2>
+                    <h2><b>Вікові обмеження:</b> <span class="color-years-black" id="book-age"></span></h2>
+                    <h2><b>Мова книги: </b><span id="book-language">{{ln}}</span></h2>
+                    <h2><b>Опублікована: </b><span id="book-date">{{data}}</span></h2>
+                    <h2><b>Опис: </b><span id="book-description">{{anthocium}}</span></h2>
+                </div>
+                <button class = "downbook">Завантажити</button>
+                <button class = "readbook">Читати</button>
             </div>
-            <div>
-                <h2><b>Жанр: </b><span id="book-genre">{{genre}}</span></h2>
-                <h2><b>Автор(и): </b><span id="book-authors">{{author}}</span></h2>
-                <h2><b>Вікові обмеження:</b> <span class="color-years-black" id="book-age"></span></h2>
-                <h2><b>Мова книги: </b><span id="book-language">{{ln}}</span></h2>
-                <h2><b>Опублікована: </b><span id="book-date">{{data}}</span></h2>
-                <h2><b>Опис: </b><span id="book-description">{{anthocium}}</span></h2>
-            </div>
-            <button class = "downbook">Завантажити</button>
-            <button class = "readbook">Читати</button>
-        </div>
-    </script>
+        </script>
 
 <body class="about-book-body">
     <nav>
@@ -249,6 +249,5 @@
     <script type="module" src="../aboutbook.js"></script>
     <script type="module" src="../search.js"></script>
 </body>
-
 
 </html>
