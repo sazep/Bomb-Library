@@ -1,5 +1,5 @@
 let book
-fetch('/data/data.json')
+fetch('data/data.json')
     .then(response => response.json())
     .then(books => {
         book = localStorage.getItem("id")
