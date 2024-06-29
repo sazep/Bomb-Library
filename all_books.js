@@ -2,7 +2,7 @@ const count = 3
 let page = 0
 let allbooks
 function load_books(){
-    fetch("/data/data.json")
+    fetch("data/data.json")
         .then((res) => res.json())
         .then((data) => {
             allbooks = data.length
