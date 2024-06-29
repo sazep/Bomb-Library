@@ -9,8 +9,9 @@ $("#search").on("keyup", function (event) {
             .then((res) => res.json())
             .then((data) => {
                 filter_book = []
+                let regex = new RegExp(txt, "i") // ТиПа ВОТак оНо Все Равно СчиТаЕт
                 for (let bb of data) {
-                    if (bb["name"].includes(txt) || bb["author"].includes(txt)) {
+                    if (regex.test(bb["name"].toLowerCase()) || regex.test(bb["author"].toLowerCase())) {
                         filter_book.push(bb)
                     }
                 }

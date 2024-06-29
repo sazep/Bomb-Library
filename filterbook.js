@@ -32,21 +32,25 @@ function load_books() {
 load_books()
 
 function goToNextPage() {
-    if (page * count < allbooks) {
-        page = page + 1
-        load_books()
-        before.style.zIndex = 0
+    if (next.style.zIndex == 0) {
+        if (page * count < allbooks) {
+            page = page + 1
+            load_books()
+            before.style.zIndex = 0
+        }
     }
-    if ((page + 1) * count > allbooks) {
+    if ((page + 1) * count >= allbooks) {
         next.style.zIndex = -1
     }
 }
 
 function goToPreviousPage() {
-    if (page > 0) {
-        page = page - 1
-        load_books()
-        next.style.zIndex = 0
+    if (before.style.zIndex == 0) {
+        if (page > 0) {
+            page = page - 1
+            load_books()
+            next.style.zIndex = 0
+        }
     }
     if (page == 0) {
         before.style.zIndex = -1
