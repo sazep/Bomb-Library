@@ -37,6 +37,3 @@ fetch("data/popular.json")
             })
         }
     })
-
-
-

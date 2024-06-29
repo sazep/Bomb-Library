@@ -57,7 +57,7 @@ function goToPreviousPage() {
     }
 }
 
-// добавил перемещение с помощу стрелочек и букв чтоб не наводится
+// добавил перемещение с помощу стрелочек и букв чтоб не tнаводится 
 next.addEventListener("click", goToNextPage)
 before.addEventListener("click", goToPreviousPage)
 

@@ -23,7 +23,7 @@ function load_books() {
                     window.location.href = "../html/aboutbook.html"
                 })
             }
-        })
+        }) 
 }
 load_books()
 
