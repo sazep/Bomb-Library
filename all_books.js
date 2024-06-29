@@ -1,23 +1,23 @@
 const count = 3
 let page = 0
 let allbooks
-function load_books(){
+function load_books() {
     fetch("../data/data.json")
         .then((res) => res.json())
         .then((data) => {
             allbooks = data.length
-            let s = page*count 
-            let n = s+3
-            data = data.slice(s,n)
+            let s = page * count
+            let n = s + 3
+            data = data.slice(s, n)
             const temp = $('#onebook').html();
             const hb_temp = Handlebars.compile(temp);
             $("#allbooks").html(hb_temp(data));
             document.querySelector(".page").innerHTML = page + 1
         })
-        .then((res) =>{
+        .then((res) => {
             let books = document.querySelectorAll(".onebook")
-            for (let bb of books){
-                bb.addEventListener("click", function(){
+            for (let bb of books) {
+                bb.addEventListener("click", function () {
                     let id = this.querySelector(".id").innerHTML
                     localStorage.setItem("id", id)
                     window.location.href = "../html/aboutbook.html"

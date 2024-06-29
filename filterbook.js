@@ -1,33 +1,33 @@
-let filter_book 
+let filter_book
 const count = 3
-let page = 0 
-let all_books 
+let page = 0
+let all_books
 let before = document.querySelector(".before1")
 let next = document.querySelector(".next1")
-function load_books(){
-            filter_book = JSON.parse(localStorage.getItem("filterbook"))
-            all_books  = filter_book.length
-           
-            let s = page*count 
-            let n = s+3
-            let data = filter_book.slice(s,n)
-            const temp = $('#onebook').html();
-            const hb_temp = Handlebars.compile(temp);
-            $("#allbooks").html(hb_temp(data));
-            document.querySelector(".page1").innerHTML = page + 1
-        
-            let books = document.querySelectorAll(".onebook")
-            for (let bb of books){
-                bb.addEventListener("click", function(){
-                    let id = this.querySelector(".id").innerHTML
-                    localStorage.setItem("id", id)
-                    window.location.href = "../html/aboutbook.html"
-                })
-            }
+function load_books() {
+    filter_book = JSON.parse(localStorage.getItem("filterbook"))
+    all_books = filter_book.length
 
-            if ((page + 1) * count > all_books) {
-                next.style.zIndex = -1
-            }
+    let s = page * count
+    let n = s + 3
+    let data = filter_book.slice(s, n)
+    const temp = $('#onebook').html();
+    const hb_temp = Handlebars.compile(temp);
+    $("#allbooks").html(hb_temp(data));
+    document.querySelector(".page1").innerHTML = page + 1
+
+    let books = document.querySelectorAll(".onebook")
+    for (let bb of books) {
+        bb.addEventListener("click", function () {
+            let id = this.querySelector(".id").innerHTML
+            localStorage.setItem("id", id)
+            window.location.href = "../html/aboutbook.html"
+        })
+    }
+
+    if ((page + 1) * count > all_books) {
+        next.style.zIndex = -1
+    }
 }
 load_books()
 
