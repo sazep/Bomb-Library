@@ -25,21 +25,20 @@ function load_books() {
         })
     }
 
-    if ((page + 1) * count > all_books) {
+    if ((page + 1) * count >= all_books) {
         next.style.zIndex = -1
     }
 }
 load_books()
-
 function goToNextPage() {
-    if (next.style.zIndex == 0) {
-        if (page * count < allbooks) {
+    if (next.style.zIndex == 0){
+        if (page * count < all_books) {
             page = page + 1
             load_books()
             before.style.zIndex = 0
         }
     }
-    if ((page + 1) * count >= allbooks) {
+    if ((page + 1) * count >= all_books) {
         next.style.zIndex = -1
     }
 }
@@ -52,7 +51,7 @@ function goToPreviousPage() {
             next.style.zIndex = 0
         }
     }
-    if (page == 0) {
+    if (page <= 0) {
         before.style.zIndex = -1
     }
 }
