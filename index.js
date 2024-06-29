@@ -1,4 +1,4 @@
-fetch("/data/new.json")
+fetch("data/new.json")
     .then((res)=>res.json())
     .then((data)=>{
         const temp = $("#book").html()
@@ -18,7 +18,7 @@ fetch("/data/new.json")
         }
     }) 
 
-fetch("/data/popular.json")
+fetch("data/popular.json")
     .then((res)=>res.json())
     .then((data)=>{
         const temp = $("#book").html()
