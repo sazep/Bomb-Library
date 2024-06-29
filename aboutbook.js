@@ -1,7 +1,8 @@
+let book
 fetch('/data/data.json')
     .then(response => response.json())
     .then(books => {
-        let book = localStorage.getItem("id")
+        book = localStorage.getItem("id")
         for (let bb of books){
             if (bb ["id"] == +book){
                 book = bb
@@ -18,17 +19,6 @@ fetch('/data/data.json')
         document.getElementById('filled-stars').textContent = filledStars
         document.getElementById('unfilled-stars').textContent = unfilledStars
     })
-    .catch(error => console.error('Ошибка загрузки данных:', error))
-
-fetch("/data/data.json")
-    .then((res)=>res.json())
-    .then((data)=>{
-        const temp = $("#book").html()
-        const htTemp = Handlebars.compile(temp)
-        $("#new").html(htTemp(data))
-    })
-
-
 const count = 3
 let page = 0
 function load_books(){
@@ -42,5 +32,21 @@ function load_books(){
             const hb_temp = Handlebars.compile(temp);
             $("#similar-book").html(hb_temp(data));
         })
-}
+        .then((abc)=>{
+            document.querySelector('.downbook').addEventListener("click",()=>{
+                const file = book["file"]
+                const down = document.createElement("a")
+                down.setAttribute("download", file)
+                down.setAttribute("href", `data:text/plain;charset=utf-8,${encodeURIComponent(file)}`)
+                down.style.display = "none"
+                document.body.appendChild(down)
+                down.click()
+                document.body.removeChild(down)
+            })
+            document.querySelector('.readbook').addEventListener("click",()=>{
+                localStorage.setItem("filebook", book['file'])
+                window.location.href = "read.html"
+            })
+        })
+    }
 load_books()
