@@ -8,7 +8,6 @@ $("#search").on("keyup", function (event) {
         fetch("https://sazep.github.io/Loogik-Library/data/data.json")
             .then((res) => res.json())
             .then((data) => {
-                console.log("Данные загружены:", data);
                 filter_book = []
                 let regex = new RegExp(txt, "i") // ТиПа ВОТак оНо Все Равно СчиТаЕт s  
                 for (let bb of data) {
@@ -17,7 +16,7 @@ $("#search").on("keyup", function (event) {
                     }
                 }
                 localStorage.setItem("filterbook", JSON.stringify(filter_book))
-                window.location.href = "../html/filter_book.html"
+                window.location.href = "https://sazep.github.io/Loogik-Library/html/filter_book.html"
             })
     }
 })
