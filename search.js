@@ -8,15 +8,32 @@ $("#search").on("keyup", function (event) {
         fetch("../data/data.json")
             .then((res) => res.json())
             .then((data) => {
+                console.log("Данные загружены:", data);
                 filter_book = []
-                let regex = new RegExp(txt, "i") // ТиПа ВОТак оНо Все Равно СчиТаЕт s
+                let regex = new RegExp(txt, "i") // ТиПа ВОТак оНо Все Равно СчиТаЕт s  
                 for (let bb of data) {
-                    if (regex.test(bb["name"].toLowerCase()) || regex.test(bb["author"].toLowerCase())) {
+                    if (regex.test(bb["name"].toLowerCase()) || regex.test(bb["author"].toLowerCase()) || regex.test(bb["genre"].toLowerCase())) {
                         filter_book.push(bb)
                     }
                 }
                 localStorage.setItem("filterbook", JSON.stringify(filter_book))
                 window.location.href = "../html/filter_book.html"
+            })
+            .catch(() => {
+                fetch("/data/data.json")
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log("Данные загружены:", data);
+                        filter_book = []
+                        let regex = new RegExp(txt, "i") // ТиПа ВОТак оНо Все Равно СчиТаЕт s  
+                        for (let bb of data) {
+                            if (regex.test(bb["name"].toLowerCase()) || regex.test(bb["author"].toLowerCase()) || regex.test(bb["genre"].toLowerCase())) {
+                                filter_book.push(bb)
+                            }
+                        }
+                        localStorage.setItem("filterbook", JSON.stringify(filter_book))
+                        window.location.href = "../html/filter_book.html"
+                    })
             })
     }
 })
