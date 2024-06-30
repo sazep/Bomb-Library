@@ -1,28 +1,28 @@
 <html>
 <link rel="stylesheet" href="../style/style.css">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<title>Loading..</title>
+<title>Logika Library</title>
 <link rel="icon" href="../src/Logo.jpg">
 <script src="https://kit.fontawesome.com/524028f0f4.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 <script type="x/handlebars" id="similbook">
-            {{#each this}}
-            <div class="book center">
-                    <div class="front">
-                        <img class="cover" src={{cover}} alt="">
-                    </div>
-                    <div class="back">
-                        <div class="back-content center">
-                            <h2 class="name">Назва книги: {{name}}</h2>
-                            <h2 class="author">Автор:{{author}}</h2>
-                            <span class="about">{{anthocium}}</span>
-                            <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
-                        </div>
-                </div>
+{{#each this}}
+    <div class="book center">
+            <div class="front">
+                <img class="cover" src={{cover}} alt="">
             </div>
-                {{/each}}
-        </script>
+            <div class="back">
+                <div class="back-content center">
+                    <h2 class="name">Назва книги: {{name}}</h2>
+                    <h2 class="author">Автор:{{author}}</h2>
+                    <span class="about">{{anthocium}}</span>
+                    <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
+                </div>
+        </div>
+    </div>
+{{/each}}
+</script>
 <script type="x/handlebars" id="aboutbook">
             <div class="div-img">
                 <div>
@@ -104,22 +104,36 @@
 
             </div>
         </article>
-    </main>
-    <div class="comment-section">
-        <h3>Коментар</h3>
-        <form class="comment-form">
-            <div class="comment-editor">
-                <span title="Жирный" onclick="wrapText('b')"><b>𝐁</b></span>
-                <span title="Курсив" onclick="wrapText('k')"><i>I</i></span>
-                <span title="Подчеркнутый" onclick="wrapText('u')"><u>U</u></span>
-                <span title="Зачёркнутый" onclick="wrapText('s')"><s>S</s></span>
-                <span title="Спойлер" onclick="wrapText('spoiler')">Spoiler</span>
+        <div class="comment-section">
+            <h2 class="center">Коментарії</h2>
+        <form id="comment-form" class="comment-form">
+            <div class="comment-section">
+                <div class="comment-editor">
+                    <span title="Жирный" onclick="wrapText('b')"><b>𝐁</b></span>
+                    <span title="Курсив" onclick="wrapText('i')"><i>I</i></span>
+                    <span title="Подчеркнутый" onclick="wrapText('u')"><u>U</u></span>
+                    <span title="Зачёркнутый" onclick="wrapText('s')"><s>S</s></span>
+                    <span title="Спойлер" onclick="wrapText('spoiler')">Spoiler</span>
+                </div>
+                <textarea id="comment-text-area" placeholder="Текст" maxlength="1500" required></textarea>
+                <button type="submit" id="submit">Відправити</button>
             </div>
-            <textarea id="comment-text" placeholder="Текст коментаря" required></textarea>
-            <button type="submit">Відправити</button>
         </form>
-    </div>
+        <ul id="user-comments-lists"></ul>
 
+    
+        <script id="comment-template" type="text/x-handlebars-template">
+            {{#each this}}
+                <li style="list-style-type: none;">
+                    <div class="comment">
+                    <div><img class="avatar" src="../src/avatar.jpg">
+                        <strong>{{name}}</strong><strong> • </strong><small>{{timeAgo}}</small>
+                    <div><p>{{comment}}</p></div>
+                    </div>
+                </li>
+            {{/each}}
+        </script>
+    </main>
     <footer>
         <div class="footer-wraper">
             <div class="footer-columns">
