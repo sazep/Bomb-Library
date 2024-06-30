@@ -723,25 +723,23 @@ article {
   background-color: var(--main-dark);
   border-radius: 40px 0 40px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly
 }
 
 .similar-book img {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 /* коментарии */
 .comment-section {
-  margin: 30px;
-  margin-left: 10%;
+  margin: 30px
 }
 
 .comment-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-
+  gap: 10px
 }
 
 .comment-form textarea {
@@ -786,6 +784,7 @@ article {
   cursor: pointer;
   border-radius: 4px;
   background-color: var(--bg);
+  margin-right: 10px;
 }
 
 .comment-editor span:hover {
@@ -797,7 +796,18 @@ article {
   height: 20px;
 }
 
+.comment-section {
+  margin-bottom: 20px;
+}
 
+#user-comments {
+  margin-top: 20px;
+}
+.comment {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
 /* стилі для сторінки читати книжку read.html */
 .read{
@@ -839,6 +849,7 @@ button{
   border: #512DA8 3px groove;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
 button:focus{
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   transition: 1s;

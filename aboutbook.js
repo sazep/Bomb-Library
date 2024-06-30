@@ -50,3 +50,15 @@ function load_books(){
         })
     }
 load_books()
+
+// коментарии
+fetch("../data/comments.json")
+    .then((res) => res.json())
+    .then((data) => {
+        let s = page*count 
+        let n = s+3
+        data = data.slice(s,n)
+        const temp = $('#users-comments').html();
+        const hb_temp = Handlebars.compile(temp);
+        $("#user-comments-lists").html(hb_temp(data));
+    })
