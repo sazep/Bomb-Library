@@ -11,9 +11,9 @@ fetch('../data/data.json')
             }
         }
 
-        const temp = $('#aboutbook').html();
-        const hb_temp = Handlebars.compile(temp);
-        $("#book").html(hb_temp(book));
+        const temp = $('#aboutbook').html()
+        const hb_temp = Handlebars.compile(temp)
+        $("#book").html(hb_temp(book))
 
         const filledStars = '★'.repeat(book.mark)
         const unfilledStars = '☆'.repeat(10 - book.mark)
@@ -29,9 +29,9 @@ function load_books(){
             let s = page*count 
             let n = s+3
             data = data.slice(s,n)
-            const temp = $('#similbook').html();
-            const hb_temp = Handlebars.compile(temp);
-            $("#similar-book").html(hb_temp(data));
+            const temp = $('#similbook').html()
+            const hb_temp = Handlebars.compile(temp)
+            $("#similar-book").html(hb_temp(data))
         })
         .then((abc)=>{
             document.querySelector('.downbook').addEventListener("click",()=>{
@@ -150,13 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateTimeAgo, 60000)
 
     function updateTimeAgo() {
-        const currentDate = new Date();
+        const currentDate = new Date()
         comments[currentBookId].forEach(comment => {
-            comment.timeAgo = getTimeAgo(new Date(comment.timeBack));
-        });
+            comment.timeAgo = getTimeAgo(new Date(comment.timeBack))
+        })
     
-        renderComments();
-        saveCommentsToLocalStorage(currentBookId, comments[currentBookId]);
+        renderComments()
+        saveCommentsToLocalStorage(currentBookId, comments[currentBookId])
     }
     
 })
