@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="../style/style.css">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <title>Logika Library</title>
-<link href="/animego/css/social-likes_flat.min.css" rel="stylesheet" type="text/css">
 <link rel="icon" href="../src/Logo.jpg">
 <script src="https://kit.fontawesome.com/524028f0f4.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -20,27 +19,6 @@
                     <span class="about">{{anthocium}}</span>
                     <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
                 </div>
-        </div>
-    </div>
-{{/each}}
-</script>
-<!-- коментарии -->
-<script type="x/handlebars" id="users-comments">
-{{#each this}}
-    <div id="comments">
-        <div id="comment">
-            <div id="avatar"><img></img></div>
-            <div id="media-body">
-                <div id="comment-author">
-                    <div id="name">{{name}}</div>
-                    <span class="gray-text">•</span>
-                    <small class="gray-text"><time>{{timeBack}}</time></small>
-                </div>
-                <div class="comment-text" data-readmore="container" data-readmore-btn-show="Читати далі" data-readmore-btn-hide="Сховати" data-read-more-init="true">
-                    <div data-readmore="content" id="comment-text-id?">{{comment}}</div>
-                </div>
-                <div class="read-more"></div>
-            </div>
         </div>
     </div>
 {{/each}}
@@ -127,8 +105,9 @@
             </div>
         </article>
         <div class="comment-section">
-            <h3>Коментар</h3>
-            <form class="comment-form" onsubmit="addComment(event)">
+            <h2 class="center">Коментарії</h2>
+        <form id="comment-form" class="comment-form">
+            <div class="comment-section">
                 <div class="comment-editor">
                     <span title="Жирный" onclick="wrapText('b')"><b>𝐁</b></span>
                     <span title="Курсив" onclick="wrapText('i')"><i>I</i></span>
@@ -136,15 +115,26 @@
                     <span title="Зачёркнутый" onclick="wrapText('s')"><s>S</s></span>
                     <span title="Спойлер" onclick="wrapText('spoiler')">Spoiler</span>
                 </div>
-                <textarea id="comment-text-area" placeholder="Текст коментаря" required></textarea>
+                <textarea id="comment-text-area" placeholder="Текст" maxlength="1500" required></textarea>
                 <button type="submit" id="submit">Відправити</button>
-            </form>
-        </div>
+            </div>
+        </form>
+        <ul id="user-comments-lists"></ul>
 
-        <div id="user-comments-lists">
-        </div>
+    
+        <script id="comment-template" type="text/x-handlebars-template">
+            {{#each this}}
+                <li style="list-style-type: none;">
+                    <div class="comment">
+                    <div><img class="avatar" src="../src/avatar.jpg">
+                        <strong>{{name}}</strong><strong> • </strong><small>{{timeAgo}}</small>
+                    <div><p>{{comment}}</p></div>
+                    </div>
+                </li>
+            {{/each}}
+        </script>
     </main>
-    <!-- <footer>
+    <footer>
         <div class="footer-wraper">
             <div class="footer-columns">
                 <div class="footer-logo-column">
@@ -269,7 +259,7 @@
             </div>
         </div>
 
-    </footer> -->
+    </footer>
     <script type="module" src="../aboutbook.js"></script>
     <script type="module" src="../search.js"></script>
 </body>
