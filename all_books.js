@@ -1,6 +1,7 @@
 const count = 3
 let page = 0
 let allbooks
+let save_books
 function load_books() {
     fetch("../data/data.json")
         .then((res) => res.json())
@@ -15,6 +16,27 @@ function load_books() {
             document.querySelector(".page").innerHTML = page + 1
         })
         .then((res) => {
+            
+            let plus = document.querySelectorAll(".icon-plus")
+            for (let p of plus) {
+                localStorage.removeItem("save_books")
+                p.addEventListener("click", function(){
+                    save_books = localStorage.getItem("save_books")
+                    if (save_books === null) {
+                        save_books = []
+                    } else {
+                        save_books = JSON.parse(save_books)
+                    } 
+                    let id = this.parentNode.querySelector('.id').innerHTML
+                    if (save_books.includes(id)){
+                        alert("Книга вже додана")
+                    } else {
+                        alert("Книга додана")
+                        save_books.push(id)
+                        localStorage.setItem("save_books",JSON.stringify(save_books))
+                    }
+                })
+            }
             let books = document.querySelectorAll(".onebook")
             for (let bb of books) {
                 bb.addEventListener("click", function () {

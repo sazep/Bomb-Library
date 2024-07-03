@@ -10,17 +10,19 @@
     <script src="https://kit.fontawesome.com/524028f0f4.js" crossorigin="anonymous"></script>
     <script type="x/handlebars" id="onebook">
       {{#each this}}
-        <div class="onebook">
-            <span class="icon-plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-          <p class = "id" id = "id">{{id}}</p>
-          <img src="{{cover}}" alt="">
-          <div class="infobook">
-            <p><span>Назва:</span>{{name}}</p>
-            <p><span>Автор:</span>{{author}}</p>
-            <p><span>Мова:</span>{{ln}}</p>
-            <p><span>Жанр:</span>{{genre}}</p>
-            <p class="cat"><span>Опис:</span>{{anthocium}}</p>
-          </div>
+      <div class="add-book">
+        <span class="icon-plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
+            <div class="onebook">
+                <p class = "id" id = "id">{{id}}</p>
+                <img class="cover" src="{{cover}}" alt="">
+                <div class="infobook">
+                    <p><span>Назва:</span>{{name}}</p>
+                    <p><span>Автор:</span>{{author}}</p>
+                    <p><span>Мова:</span>{{ln}}</p>
+                    <p><span>Жанр:</span>{{genre}}</p>
+                    <p class="cat"><span>Опис:</span>{{anthocium}}</p>
+                </div>
+            </div>
         </div>
       {{/each}}
   </script>
@@ -41,8 +43,8 @@
             </div>
 
             <div class="container-1">
-                <span class="icon-2"><a class="list-group-item" href="#"></a><i class='fas fa-bookmark'
-                        style='font-size:34px;margin-left: 9%;margin-top: 6%;'></i></span>
+                <a class="list-group-item" href="../html/save_book.html"><span class="icon-1"><i class='fas fa-bookmark'
+                        style='font-size:34px;margin-left: 9%;margin-top: 6%;'></i></span></a>
             </div>
         </div>
     </nav>

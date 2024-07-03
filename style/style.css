@@ -262,19 +262,24 @@ nav .container-1:first-child:hover{
   flex-direction: column;
  align-items: center;
 }
-.icon-plus{
-  position: absolute;
-  margin-left: 63%;
+.icon-plus,.icon-minus{
+  position: relative;
+  left: 94%;
+  top: 60px;
   font-size: 35px;
+  color: var(--footer-bg);
 }
 /* ПОЧАТОК СТИЛІ ДЛЯ ALL-BOOKS */
-.onebook{
+.add-book{
+  position: relative;
   width: 70%;
+  margin-bottom: 1%;
+}
+.onebook{
   text-decoration: none;
   display: flex;
   background-color: var(--color-separator);
   padding: 2%;
-  margin-bottom: 1%;
   color: var(--main-light);
   border-radius:20px;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
