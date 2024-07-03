@@ -400,6 +400,10 @@ nav .container-1:first-child:hover{
 .center {
   text-align: center;
 }
+.similar-book{
+  position: relative;
+  left: 15%;  
+}
 .id{
   display: none;
 }
@@ -731,7 +735,8 @@ article {
   background-color: var(--main-dark);
   border-radius: 40px 0 40px 0;
   display: flex;
-  justify-content: space-evenly
+  justify-content: space-evenly;
+  margin-bottom: 3%;
 }
 
 .similar-book img {

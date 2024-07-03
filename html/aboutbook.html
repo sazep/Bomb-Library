@@ -8,17 +8,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 <script type="x/handlebars" id="similbook">
 {{#each this}}
-    <div class="book center">
-            <div class="front">
-                <img class="cover" src={{cover}} alt="">
-            </div>
-            <div class="back">
-                <div class="back-content center">
-                    <h2 class="name">Назва книги: {{name}}</h2>
-                    <h2 class="author">Автор:{{author}}</h2>
-                    <span class="about">{{anthocium}}</span>
-                    <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
+    <div class='right_center'>
+        <div class="book center">
+                <div class="front">
+                    <img class="cover" src={{cover}} alt="">
                 </div>
+                <div class="back">
+                    <div class="back-content center">
+                        <h2 class="name">Назва книги: {{name}}</h2>
+                        <h2 class="author">Автор:{{author}}</h2>
+                        <span class="about">{{anthocium}}</span>
+                        <span class="rev">Оцінка: {{mark}}★ | Опубліковано: {{data}}</span>
+                    </div>
+            </div>
         </div>
     </div>
 {{/each}}
