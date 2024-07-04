@@ -262,20 +262,23 @@ nav .container-1:first-child:hover{
   flex-direction: column;
  align-items: center;
 }
-.icon-plus,.icon-minus{
+.icon-plus,
+.icon-minus{
   position: relative;
-  left: 94%;
+  left: 93%;
   top: 60px;
   font-size: 35px;
-  color: var(--footer-bg);
+  color: black;
+  z-index: 10;
 }
 /* ПОЧАТОК СТИЛІ ДЛЯ ALL-BOOKS */
 .add-book{
   position: relative;
   width: 70%;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 .onebook{
+  width: 100%;
   text-decoration: none;
   display: flex;
   background-color: var(--color-separator);
@@ -396,6 +399,10 @@ nav .container-1:first-child:hover{
 
 .center {
   text-align: center;
+}
+.similar-book{
+  position: relative;
+  left: 15%;  
 }
 .id{
   display: none;
@@ -694,22 +701,6 @@ article {
   color: var(--gold);
 }
 
-/* кладмен му.. ой тоесть закладка(не та) */
-.dropdown {
-  margin-top: 20px;
-  text-align: center;
-  margin-left: -30%;
-}
-
-.dropdown select {
-  background-color: var(--footer-border);
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid var(--color-separator);
-  color: var(--headline-color);
-  border-radius: 4px;
-}
-
 /* инфнормация про книгу */
 .about-book {
   width: 70%;
@@ -728,7 +719,8 @@ article {
   background-color: var(--main-dark);
   border-radius: 40px 0 40px 0;
   display: flex;
-  justify-content: space-evenly
+  justify-content: space-evenly;
+  margin-bottom: 3%;
 }
 
 .similar-book img {
