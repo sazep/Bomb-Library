@@ -82,7 +82,6 @@ function goToPreviousPage() {
         before.style.zIndex = -1
     }
 }
-
 // добавил перемещение с помощу стрелочек и букв чтоб не наводится
 next.addEventListener("click", goToNextPage)
 before.addEventListener("click", goToPreviousPage)
