@@ -3,7 +3,7 @@ file = "../book/" + file
 const count = 1700
 let page = 0
 let allbooks
-
+// Завантажуємо текст книги
 function load_text() {
     fetch(file)
         .then((res) => res.text())
@@ -19,10 +19,9 @@ function load_text() {
         })
 }
 load_text()
-
 let before = document.querySelector(".before")
 let next = document.querySelector(".next")
-
+// Переходимо до наступної сторінки
 function goToNextPage() {
     if (next.style.zIndex == 0) {
         if (page * count < allbooks) {
@@ -35,7 +34,7 @@ function goToNextPage() {
         next.style.zIndex = -1
     }
 }
-
+// Повертаємося до попередньої сторінки
 function goToPreviousPage() {
     if (before.style.zIndex == 0) {
         if (page > 0) {
@@ -48,7 +47,7 @@ function goToPreviousPage() {
         before.style.zIndex = -1
     }
 }
-// добавил перемещение с помощу стрелочек и букв чтоб не наводитсяs
+// Додаємо переміщення за допомогою стрілок та клавіш, щоб не наводитися
 next.addEventListener("click", goToNextPage)
 before.addEventListener("click", goToPreviousPage)
 
