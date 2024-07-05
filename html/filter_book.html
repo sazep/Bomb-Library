@@ -10,18 +10,20 @@
     <script src="https://kit.fontawesome.com/524028f0f4.js" crossorigin="anonymous"></script>
     <script type="x/handlebars" id="onebook">
       {{#each this}}
+    <div class="add-book">
         <div class="onebook">
             <span class="icon-plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-          <p class = "id" id = "id">{{id}}</p>
-          <img src="{{cover}}" alt="">
-          <div class="infobook">
-            <p><span>Назва:</span>{{name}}</p>
-            <p><span>Автор:</span>{{author}}</p>
-            <p><span>Мова:</span>{{ln}}</p>
-            <p><span>Жанр:</span>{{genre}}</p>
-            <p class="cat"><span>Опис:</span>{{anthocium}}</p>
-          </div>
+            <p class = "id" id = "id">{{id}}</p>
+            <img src="{{cover}}" alt="">
+            <div class="infobook">
+                <p><span>Назва:</span>{{name}}</p>
+                <p><span>Автор:</span>{{author}}</p>
+                <p><span>Мова:</span>{{ln}}</p>
+                <p><span>Жанр:</span>{{genre}}</p>
+                <p class="cat"><span>Опис:</span>{{anthocium}}</p>
+            </div>
         </div>
+    </div>
       {{/each}}
   </script>
 </head>
