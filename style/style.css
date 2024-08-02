@@ -1,4 +1,4 @@
-/* кольора */
+кольора
 :root {
   /* Основний темний колір */
   --main-dark: #512DA8;
@@ -29,6 +29,7 @@
 
 /* загальні стилі для всіє сторінки */
 body {
+
   position: relative;
   background-color: var(--main-dark);
   color: var(--main-text);
@@ -47,6 +48,7 @@ header,main,footer{
 }
 main{
   min-height: 500px;
+  perspective: 1400px;
 }
 /*  */
 /* шрифт */
@@ -74,6 +76,38 @@ header {
   0px -20px 40px #7285c9;
   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
   font-size: 100px; 
+}
+
+#anim_txt:hover{
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  transition: 0.5s;
+} 
+
+#anim_txt:before,
+#anim_txt:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+transition: 0.5s;}
+
+#anim_txt:hover:before {
+  color: #f00;
+  z-index: 1;
+  -webkit-text-stroke: 1px #000;
+  transform: translate(10px,-10px);
+}
+#anim_txt:hover:after {
+  color: #0ff;
+  z-index: 2;
+  -webkit-text-stroke: 1px #000;
+  transform: translate(20px,-20px);
+}
+
+#anim_txt{
+  color: var(--headline-color);
+  -webkit-text-stroke:100px var(--color-accent) ;
 }
 
 header img {
@@ -357,6 +391,7 @@ nav .container-1:first-child:hover{
   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
   font-size: 100px; 
 }
+
 .book {
   position: relative;
   width: 250px;

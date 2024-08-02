@@ -60,3 +60,15 @@ document.addEventListener("keydown", (event) => {
         goToPreviousPage()
     }
 })
+
+
+document.addEventListener("mousemove",function(mouse){
+    let x = mouse.pageX
+    let y = mouse.pageY
+    let Dx = window.innerWidth/2-x
+    let Dy = window.innerHeight/2-y
+    let angelY = 20*Dy/window.innerHeight/2
+    let angelX = 20*Dx/window.innerWidth/2
+    let read = document.querySelector(".read")
+    read.style.transform = `rotateX(${angelY}deg)rotateY(${angelX}deg)`
+})
